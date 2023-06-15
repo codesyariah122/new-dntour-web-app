@@ -39,10 +39,11 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script type="text/javascript">
       (adsbygoogle = window.adsbygoogle || []).push({
-        google_ad_client: <?=$meta['google_ads_key']?>,
+        google_ad_client: '<?=$meta['google_ads_key']?>',
         enable_page_level_ads: true
       });
     </script>
   </head>
 <body>
+
   <?php require_once $partials['navbar']; ?>

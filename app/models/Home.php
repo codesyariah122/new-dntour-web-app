@@ -58,7 +58,7 @@ class Home {
 			'og_image' => '/public/assets/images/new-bg.jpg',
 			'og_image_width' => '600',
 			'og_image_height' => '600',
-			'goole_ads_key' => 'pub-3269967595614450',
+			'google_ads_key' => 'pub-3269967595614450',
 			'gtag_id' => 'UA-255953477-1',
 			'tagm_id' => 'GTM-54WQ4Z5'
 		];
