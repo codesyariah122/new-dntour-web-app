@@ -7,8 +7,16 @@
 namespace app\controllers;
 
 use app\models\{Home};
+use app\helpers\{Helpers};
 
 class HomeController {
+
+	public $helpers;
+
+	public function __construct()
+	{
+		$this->helpers = new Helpers;
+	}
 
 	public function views($views)
 	{
@@ -16,6 +24,12 @@ class HomeController {
 		$data = $model->getData();
 		$meta = $model->getMetaTag();
 		$partials = $model->getPartials();
+
+		$rentals = $data['rentals']['data'];
+		$travels = $data['travels']['data'];
+		$tours = $data['tours']['data'];
+		$categories = $data['categories']['data'];
+		$helpers = $this->helpers;
 
 		foreach($views as $view):
 			require_once $view;

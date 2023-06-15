@@ -6,7 +6,16 @@
 
 namespace app\helpers;
 
+use app\datasources\{PackagesData};
+
 class Helpers {
+
+	private $dataSources;
+
+	public function __construct()
+	{
+		$this->dataSources = new PackagesData;
+	}
 
 	public function isMobileDevice() {
 		$userAgent = $_SERVER['HTTP_USER_AGENT'];
@@ -19,5 +28,30 @@ class Helpers {
 	    }
 
 	    return false;
+	}
+
+	public function getCategoryName($lists, $categoryId)
+	{
+		$categories = $this->dataSources->categories();
+		// var_dump($categories); die;
+
+    // Filter array rentals berdasarkan category_id
+		$filteredLists = array_filter($lists, function($list) use ($categoryId) {
+			return $list['category_id'] == $categoryId;
+		});
+
+    // Ambil category_id dari hasil filter pertama
+		$firstLists = reset($filteredLists);
+		$categoryId = $firstLists['category_id'];
+
+    // Ambil nama kategori berdasarkan category_id dari array categories
+		$filteredCategories = array_filter($categories, function($category) use ($categoryId) {
+			return $category['id'] == $categoryId;
+		});
+
+    // Ambil nama kategori dari hasil filter pertama
+		$firstCategory = reset($filteredCategories);
+
+		return $firstCategory['name'];
 	}
 }

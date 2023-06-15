@@ -43,6 +43,13 @@
         enable_page_level_ads: true
       });
     </script>
+
+    <style type="text/css" rel="stylesheet">
+      body.swal2-shown > [aria-hidden="true"] {
+        transition: 0.1s filter;
+        filter: blur(10px);
+      }
+    </style>
   </head>
 <body>
 

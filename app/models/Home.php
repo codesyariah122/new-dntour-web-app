@@ -11,7 +11,7 @@ use app\datasources\{PackagesData};
 
 class Home {
 
-	private $helpers, $datasources;
+	private $helpers, $datasources, $filterCategory;
 
 	public function __construct()
 	{
@@ -47,15 +47,22 @@ class Home {
 	{
 		return [
 			'canonical' => 'https://dntourtravel.com',
-			'meta_desc' => 'D & N Tour Travel | Travel Bandung - Jakarta (Bandara Soekarno Hatta)',
-			'meta_key' => 'Travel Bandung Bandara | Sewa Mobile Bandung | City Tour',
+			'meta_desc' => 'D & N Tour Travel | Sewa Mobile Bandung | Sewa Hiace Bandung',
+			'meta_key' => 'Sewa Mobile Bandung | Sewa Hiace Bandung',
 			'meta_author' => 'D & N Tour Travel',
 			'og_url' => 'https://dntourtravel.com',
 			'og_type' => 'website',
 			'og_site_name' => 'D & N Tour Travel',
-			'og_title' => 'D & N Tour Travel - Travel Bandung Bandara',
-			'og_desc' => 'Melayani Paket reguler Travel Bandung - Jakarta (Bandara Soekarno Hatta) | Sewa mobile Bandung | Paket Wisata City Tour',
-			'og_image' => '/public/assets/images/new-bg.jpg',
+			'og_title' => 'D & N Tour Travel | Sewa Mobile Bandung | Sewa Hiace Bandung',
+			'og_desc' => 'Pelayanan kami meliputi :
+				> Sewa Mobil Bandung
+				> Paket Drop Off Bandara Soetta
+				> Sewa Hiace Bandung
+				> Antar Jemput Bandara, Stasiun, Wisuda
+				Pernikahan, Perjalanan Dinas / Meeting Kantor
+				> Antar Jemput Luar Kota
+				> Paket Wisata ',
+			'og_image' => 'https://dntourtravel.com/public/assets/images/new-bg.jpg',
 			'og_image_width' => '600',
 			'og_image_height' => '600',
 			'google_ads_key' => 'pub-3269967595614450',
@@ -92,11 +99,13 @@ class Home {
             	D & N Tour Travel menawarkan beberapa layanan jasa yang dapat Anda pilih sesuai dengan kebutuhan Anda. Layanan jasa kami yang menjadi prioritas ialah antar jemput Bandung – Jakarta (Bandara Soetta). Semua layanan yang kami tawarkan dibanderol dengan harga yang ekonomis dan terjangkau serta lengkap dengan driver / sopir profesional yang sudah memiliki perizinan mengemudi secara legal dari pihak yang berwenang.',
 
             // For data products
-            'rentals' => $this->datasources->rentals(),
+            'rentals' => ['data' => $this->datasources->rentals()],
 
-            'travels' => $this->datasources->travels(),
+            'travels' => ['data' => $this->datasources->travels()],
 
-            'tours' => $this->datasources->tours()
+            'tours' => ['data' => $this->datasources->tours()],
+
+            'categories' => ['data' => $this->datasources->categories()]
         ];
     }
 }
