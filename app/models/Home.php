@@ -25,7 +25,7 @@ class Home {
 		$check_mobile = $this->helpers->isMobileDevice();
 
 		$partials = [
-			'hero' => 'app/views/home/hero.php',
+			'hero' => !$check_mobile ? 'app/views/home/hero.php' : 'app/views/home/mobile/hero.php',
 			'rental' => !$check_mobile ? 'app/views/home/rental.php' : 'app/views/home/mobile/rental.php',
 			'travel' => !$check_mobile ? 'app/views/home/travel.php' : 'app/views/home/mobile/travel.php',
 			'tour' => !$check_mobile ? 'app/views/home/tour.php' : 'app/views/home/mobile/tour.php',
