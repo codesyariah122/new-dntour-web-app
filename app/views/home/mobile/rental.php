@@ -9,7 +9,7 @@
             <div class="col-span-10">        
                 <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                     <a href="#">
-                        <img class="rounded-t-lg" src="http://web.dntourtravel.cc.id<?=$rental['img']?>" alt="" />
+                        <img class="rounded-t-lg" src="<?=$rental['img']?>" alt="" />
                     </a>
                     <div class="px-5 pb-5 py-6">
                         <a href="#">
