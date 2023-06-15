@@ -1,4 +1,5 @@
-<section id="rental" class="container mx-auto px-4 py-24">
+<section id="rental" class="container mx-auto px-4 py-4">
+    <hr class="my-12 md:min-w-full" />
     <div class="flex justify-center mb-16">
         <div>
             <h3 class="text-4xl font-bold text-gray-900">Sewa Mobil</h3>
@@ -34,4 +35,7 @@
             </div>
         <?php endforeach; ?>
     </div>
+
+    <hr class="my-12 md:min-w-full" />
+
 </section>

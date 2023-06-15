@@ -43,7 +43,8 @@
 
 .active {
   font-weight: bold;
-  color: blue;;
+  color: rgba(76, 69, 248, 0.8)!important;
+  text-shadow: 2px 2px 4px rgba(149, 159, 159, 0.8)!important;
 }
 
 @keyframes lights {

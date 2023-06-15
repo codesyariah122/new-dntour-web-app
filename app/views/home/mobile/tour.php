@@ -1,4 +1,4 @@
-<section id="tour" class="container mx-auto px-4 py-24">
+<section id="tour" class="container mx-auto px-4 py-4">
     <div class="flex justify-center mb-16">
         <div>
             <h3 class="text-4xl font-bold text-gray-900">Paket City Tour</h3>
@@ -34,4 +34,7 @@
             </div>
         <?php endforeach; ?>
     </div>
+
+    <hr class="my-12 md:min-w-full" />
+
 </section>
