@@ -31,13 +31,13 @@
     color: #fff;
     border-radius: 50px;
     text-align: center;
-    font-size: 35px;
+    font-size: 21px;
     box-shadow: 2px 2px 3px #999;
     z-index: 100;
   }
 
   .my-float {
-    margin-top: 18px;
+    margin-top: 21px;
   }
 }
 

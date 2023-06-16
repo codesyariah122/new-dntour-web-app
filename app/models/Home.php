@@ -31,7 +31,7 @@ class Home {
 			'tour' => !$check_mobile ? 'app/views/home/tour.php' : 'app/views/home/mobile/tour.php',
 			'gallery' => 'app/views/home/gallery.php',
 			'contact' => !$check_mobile ? 'app/views/home/contact.php' : 'app/views/home/mobile/contact.php',
-			'whatsapp' => 'app/views/home/whatsapp.php',
+			'whatsapp' => !$check_mobile ? 'app/views/home/whatsapp.php' : 'app/views/home/mobile/whatsapp.php',
 		];
 
 		$scripts = ['/public/assets/js/script.js', '/public/assets/js/nav.js'];
