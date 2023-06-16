@@ -108,4 +108,35 @@ class PackagesData {
             ]
         ];
     }
+
+    public function sliders()
+    {
+        return [
+            [
+                'id' => 1,
+                'img' => '/public/assets/images/gallery/intro.png',
+                'alt' => 'Intro D & N'
+            ],
+            [
+                'id' => 2,
+                'img' => '/public/assets/images/gallery/new-bg.jpg',
+                'alt' => 'D & N Tour Travel'
+            ],
+            [
+                'id' => 3,
+                'img' => '/public/assets/images/gallery/changing-family.jpg',
+                'alt' => 'D & N For Family'
+            ],
+            [
+                'id' => 4,
+                'img' => '/public/assets/images/gallery/hero-again.png',
+                'alt' => 'D & N Rentals'
+            ],
+            [
+                'id' => 5,
+                'img' => '/public/assets/images/gallery/new-hero-again.webp',
+                'alt' => 'D & N Rentals'
+            ]
+        ];
+    }
 }

@@ -29,6 +29,7 @@ class Home {
 			'rental' => !$check_mobile ? 'app/views/home/rental.php' : 'app/views/home/mobile/rental.php',
 			'travel' => !$check_mobile ? 'app/views/home/travel.php' : 'app/views/home/mobile/travel.php',
 			'tour' => !$check_mobile ? 'app/views/home/tour.php' : 'app/views/home/mobile/tour.php',
+			'gallery' => 'app/views/home/gallery.php',
 			'contact' => !$check_mobile ? 'app/views/home/contact.php' : 'app/views/home/mobile/contact.php',
 			'whatsapp' => 'app/views/home/whatsapp.php',
 		];
@@ -62,7 +63,7 @@ class Home {
 				Pernikahan, Perjalanan Dinas / Meeting Kantor
 				> Antar Jemput Luar Kota
 				> Paket Wisata ',
-			'og_image' => 'https://dntourtravel.com/public/assets/images/new-bg.jpg',
+			'og_image' => 'https://images.ctfassets.net/hm3eztweb2rs/fxNBlorDiVrLSffPDc3eG/f03a8f6e6aa817cec8060818f6f445c1/about-dn.jpg?h=250',
 			'og_image_width' => '600',
 			'og_image_height' => '600',
 			'google_ads_key' => 'pub-3269967595614450',
@@ -76,7 +77,7 @@ class Home {
         // Logika untuk mengambil data dari database atau sumber data lainnya
         return [
         	'logo' => '/public/assets/img/D&N-Logo.png',
-        	'hero_img' => '/public/assets/images/hero_1.png',
+        	'hero_img' => '/public/assets/images/bg-hero.jpg',
         	'bg_img' => '/public/assets/images/bg-new.webp',
         	'favicon' => '/public/assets/favicon.ico',
             'title' => 'D & N Tour Travel',
@@ -105,7 +106,9 @@ class Home {
 
             'tours' => ['data' => $this->datasources->tours()],
 
-            'categories' => ['data' => $this->datasources->categories()]
+            'categories' => ['data' => $this->datasources->categories()],
+
+            'sliders' => ['data' => $this->datasources->sliders()]
         ];
     }
 }

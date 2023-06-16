@@ -3,6 +3,21 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <script type="text/javascript" async src="https://www.google-analytics.com/analytics.js"></script>
+
+    <script async src="https://www.googletagmanager.com/gtm.js?id=<?=$meta['tagm_id']?>"></script>
+
+    <script type="text/javascript" async src="https://www.googletagmanager.com/gtag/js?id=<?=$meta['gtag_id']?>&l=dataLayer&cx=c"></script>
+
+    <script  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" client="<?=$meta['google_ads_key']?>" crossorigin="anonymous" async=""></script>
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script type="text/javascript">
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: '<?=$meta['google_ads_key']?>',
+        enable_page_level_ads: true
+      });
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css"  rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -28,21 +43,7 @@
 
     <link rel="shortcut icon" href="<?=$data['favicon']?>">
 
-    <script type="text/javascript" async src="https://www.google-analytics.com/analytics.js"></script>
-
-    <script async src="https://www.googletagmanager.com/gtm.js?id=<?=$meta['tagm_id']?>"></script>
-
-    <script type="text/javascript" async src="https://www.googletagmanager.com/gtag/js?id=<?=$meta['gtag_id']?>&l=dataLayer&cx=c"></script>
-
-    <script  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" client="<?=$meta['google_ads_key']?>" crossorigin="anonymous" async=""></script>
-    
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script type="text/javascript">
-      (adsbygoogle = window.adsbygoogle || []).push({
-        google_ad_client: '<?=$meta['google_ads_key']?>',
-        enable_page_level_ads: true
-      });
-    </script>
+   
 
     <style type="text/css" rel="stylesheet">
       body.swal2-shown > [aria-hidden="true"] {

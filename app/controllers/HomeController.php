@@ -29,6 +29,7 @@ class HomeController {
 		$travels = $data['travels']['data'];
 		$tours = $data['tours']['data'];
 		$categories = $data['categories']['data'];
+		$sliders = $data['sliders']['data'];
 		$helpers = $this->helpers;
 
 		foreach($views as $view):
