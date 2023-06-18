@@ -2,6 +2,8 @@
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
 
+		<script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+
 		<?php for($i=0; $i < count($partials['scripts']); $i++): ?>
 			<script type="text/javascript" src="<?=$partials['scripts'][$i]?>"></script>
 		<?php endfor;?>

@@ -1,4 +1,4 @@
-<section id="tour" class="container mx-auto px-4 py-0">
+<section id="tour" class="container mx-auto px-4 py-24">
     <div class="flex justify-center mb-12">
         <div>
             <h3 class="text-4xl font-bold text-gray-900">Paket City Tour</h3>

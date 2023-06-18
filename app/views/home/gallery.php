@@ -1,8 +1,4 @@
 <section id="travel" class="container mx-auto px-4 py-0">
-    <div class="flex justify-center mb-12">
-        <div></div>
-    </div>
-
     <div id="default-carousel" class="relative w-full" data-carousel="slide">
         <!-- Carousel wrapper -->
         <div class="relative h-60 overflow-hidden rounded-lg md:h-[80vh]">
