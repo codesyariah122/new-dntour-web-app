@@ -27,6 +27,7 @@ class Home {
 		$partials = [
 			'loading' => 'app/views/home/loading.php',
 			'hero' => !$check_mobile ? 'app/views/home/hero.php' : 'app/views/home/mobile/hero.php',
+			'panel' => !$check_mobile ? 'app/views/home/panel.php' : 'app/views/home/mobile/panel.php',
 			'rental' => !$check_mobile ? 'app/views/home/rental.php' : 'app/views/home/mobile/rental.php',
 			'travel' => !$check_mobile ? 'app/views/home/travel.php' : 'app/views/home/mobile/travel.php',
 			'tour' => !$check_mobile ? 'app/views/home/tour.php' : 'app/views/home/mobile/tour.php',
