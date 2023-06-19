@@ -15,10 +15,14 @@
                     <div class="px-5 pb-5 py-6">
                         <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"><?=$tour['title']?></h5>
                         <div class="col-span-full mt-2 mb-4">
+                            <div class="flex justify-start">
+                                <small class="text-md text-gray-600 font-bold">Include : </small>
+                            </div>
+
                             <div class="flex justify-start space-x-2">
                                 <div>
                                     <span class="bg-blue-100 text-blue-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400">
-                                        <?php if($tour['title'] === 'Hiace'): ?>
+                                        <?php if($tour['title'] !== 'Hiace'): ?>
                                           <i class="fa-solid fa-car"></i>&nbsp;Mobil
                                       <?php else: ?>
                                         <i class="fa-solid fa-van-shuttle"></i>&nbsp;Mobil
