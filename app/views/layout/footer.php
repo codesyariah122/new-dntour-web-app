@@ -1,3 +1,4 @@
+		
 		<section id="footer" class="container mx-auto px-4 py-24 dark:bg-gray-800">
 			<?php require_once 'partials/footer_content.php'; ?>
 		</section>

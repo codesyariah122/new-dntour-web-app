@@ -32,6 +32,7 @@ class Home {
 			'blog' => 'app/views/home/blog.php',
 			'gallery' => 'app/views/home/gallery.php',
 			'contact' => !$this->check_mobile ? 'app/views/home/contact.php' : 'app/views/home/mobile/contact.php',
+			'ads' => !$this->check_mobile ? 'app/views/home/ads.php' : 'app/views/home/mobile/ads.php',
 			'whatsapp' => !$this->check_mobile ? 'app/views/home/whatsapp.php' : 'app/views/home/mobile/whatsapp.php',
 		];
 
@@ -81,7 +82,7 @@ class Home {
         	'hero_img' => !$this->check_mobile ? '/public/assets/images/bg-hero.jpg' : '/public/assets/images/bg-hero.jpg',
         	'bg_img' => '/public/assets/images/bg-new.webp',
         	'favicon' => '/public/assets/favicon.ico',
-            'title' => 'DN Tour Travel - Sewa Mobil Bandung | Sewa Hiace Bandung',
+            'title' => 'DN Tour Travel <br/> Sewa Mobil Bandung - Sewa Hiace Bandung',
             'brand' => 'DN Tour',
             'tagline' => ' Selamat Datang Di Website <br/> DN Tour Travel',
 			'desc_title' => 'Pelayanan kami meliputi : <br/>',

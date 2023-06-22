@@ -30,7 +30,7 @@
 
     <script type="text/javascript" async src="https://www.googletagmanager.com/gtag/js?id=<?=$meta['gtag_id']?>&l=dataLayer&cx=c"></script>
 
-    <script  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" client="<?=$meta['google_ads_key']?>" crossorigin="anonymous" async=""></script>
+    <script  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" client="<?=$meta['google_ads_key']?>" crossorigin="anonymous" async></script>
     
     <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script type="text/javascript">
@@ -39,6 +39,17 @@
         enable_page_level_ads: true
       });
     </script> -->
+
+
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle"
+    style="display:inline-block;width:728px;height:90px"
+    data-ad-client="ca-<?=$meta['google_ads_key']?>"
+    data-ad-slot="1234567890"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script> -->
+
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css"  rel="stylesheet" />

@@ -1,3 +1,4 @@
+
 <section id="home" class="bg-center bg-no-repeat bg-cover bg-[url('<?=$data['hero_img']?>')] bg-gray-700 bg-blend-multiply">
     <div class="px-4 mx-auto max-w-screen-xl text-center py-24">
         <a href="#rental" id="hero-cta" class="hero-cta inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-blue-700 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-blue-800">
