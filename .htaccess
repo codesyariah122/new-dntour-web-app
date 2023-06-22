@@ -44,3 +44,10 @@ RewriteRule . /index.php [L]
 </IfModule>
 
 # END WordPress
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^(?:www\.)dntourtravel\.com$ [NC]
+RewriteRule ^https://dntourtravel.com%{REQUEST_URI} [L,R=301]
+
+</IfModule>
