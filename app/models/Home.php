@@ -49,13 +49,13 @@ class Home {
 	{
 		return [
 			'canonical' => 'https://dntourtravel.com',
-			'meta_desc' => 'D & N Tour Travel | Sewa Mobile Bandung | Sewa Hiace Bandung | Rental Mobil Bandung | Rental Mobil Bandara',
-			'meta_key' => 'D & N Tour Travel - Sewa Mobil Bandung | Sewa Hiace Bandung',
-			'meta_author' => 'D & N Tour Travel',
+			'meta_desc' => 'DN Tour Travel | Sewa Mobile Bandung | Sewa Hiace Bandung | Rental Mobil Bandung | Rental Mobil Bandara',
+			'meta_key' => 'DN Tour Travel - Sewa Mobil Bandung | Sewa Hiace Bandung',
+			'meta_author' => 'DN Tour Travel',
 			'og_url' => 'https://dntourtravel.com',
 			'og_type' => 'website',
-			'og_site_name' => 'D & N Tour Travel - Sewa Mobil Bandung | Sewa Hiace Bandung',
-			'og_title' => 'D & N Tour Travel - Sewa Mobil Bandung | Sewa Hiace Bandung',
+			'og_site_name' => 'DN Tour Travel - Sewa Mobil Bandung | Sewa Hiace Bandung',
+			'og_title' => 'DN Tour Travel - Sewa Mobil Bandung | Sewa Hiace Bandung',
 			'og_desc' => 'Pelayanan kami meliputi :
 				> Sewa Mobil Bandung
 				> Paket Drop Off Bandara Soetta
@@ -81,9 +81,9 @@ class Home {
         	'hero_img' => !$this->check_mobile ? '/public/assets/images/bg-hero.jpg' : '/public/assets/images/bg-hero.jpg',
         	'bg_img' => '/public/assets/images/bg-new.webp',
         	'favicon' => '/public/assets/favicon.ico',
-            'title' => 'D & N Tour Travel - Sewa Mobil Bandung | Sewa Hiace Bandung',
-            'brand' => 'D & N',
-            'tagline' => ' Selamat Datang Di Website <br/> D & N Tour Travel',
+            'title' => 'DN Tour Travel - Sewa Mobil Bandung | Sewa Hiace Bandung',
+            'brand' => 'DN Tour',
+            'tagline' => ' Selamat Datang Di Website <br/> DN Tour Travel',
 			'desc_title' => 'Pelayanan kami meliputi : <br/>',
             'desc' => '<i class="fa-solid fa-location-arrow"></i>&nbsp;Sewa Mobil Bandung<br/>
             <i class="fa-solid fa-location-arrow"></i>&nbsp;Paket Drop Off Bandara Soetta <br/>
@@ -93,12 +93,12 @@ class Home {
             <i class="fa-solid fa-location-arrow"></i>&nbsp;Paket Wisata <br/>
             </ul>
             ',
-            'our_about' => 'D & N Tour Travel - merupakan jasa layanan transportasi dalam lingkup tour travel dan city tour terbaik dan profesional yang ada di wilayah Bandung. Kami memiliki kantor pusat yang berlokasi di wilayah Bandung, tepatnya di
+            'our_about' => 'DN Tour Travel - merupakan jasa layanan transportasi dalam lingkup tour travel dan city tour terbaik dan profesional yang ada di wilayah Bandung. Kami memiliki kantor pusat yang berlokasi di wilayah Bandung, tepatnya di
             	<br/>
             	Jl. Hercules II No.5, Melong, Kec. Cimahi Sel., Kota Cimahi, Jawa Barat 40534 <br/><br/>
             	Kami telah berpengalaman selama bertahun – tahun di bidang jasa antar jemput Bandung - Jakarta (Bandara Soetta) dan trip wisata, sehingga kami sangat berpengalaman dan profesional.
             	<br/><br/>
-            	D & N Tour Travel menawarkan beberapa layanan jasa yang dapat Anda pilih sesuai dengan kebutuhan Anda. Layanan jasa kami yang menjadi prioritas ialah antar jemput Bandung – Jakarta (Bandara Soetta). Semua layanan yang kami tawarkan dibanderol dengan harga yang ekonomis dan terjangkau serta lengkap dengan driver / sopir profesional yang sudah memiliki perizinan mengemudi secara legal dari pihak yang berwenang.',
+            	DN Tour Travel menawarkan beberapa layanan jasa yang dapat Anda pilih sesuai dengan kebutuhan Anda. Layanan jasa kami yang menjadi prioritas ialah antar jemput Bandung – Jakarta (Bandara Soetta). Semua layanan yang kami tawarkan dibanderol dengan harga yang ekonomis dan terjangkau serta lengkap dengan driver / sopir profesional yang sudah memiliki perizinan mengemudi secara legal dari pihak yang berwenang.',
 
             // For data products
             'rentals' => ['data' => $this->datasources->rentals()],

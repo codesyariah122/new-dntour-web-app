@@ -29,7 +29,7 @@ if(ads_mys_class) {
 
 const sendingWhatsapp = (num) => {
 	const url = `https://wa.me/${num}?text=`;
-	const textWa = "Hello,D & N Tour saya ingin memesan paket perjalanan dari D & N Tour, bisa infokan saya harga terbaik dari D & N Tour.";
+	const textWa = "Hello, DN Tour saya ingin memesan paket perjalanan dari DN Tour, bisa infokan saya harga terbaik dari DN Tour.";
 	
 	window.open(`${url}${encodeURIComponent(textWa)}`);
 }
@@ -42,8 +42,8 @@ const sendOrderWhatsapp = (data) => {
 
 const orderNow = (data) => {
 	Swal.fire({
-		title: `D & N ${data.category} - ${data.title}`,
-		text: `Order ${data.category} - ${data.title} (Rp. ${data.price}) dari D & N Tour Travel`,
+		title: `DN Tour ${data.category} - ${data.title}`,
+		text: `Order ${data.category} - ${data.title} (Rp. ${data.price}) dari DN Tour Travel`,
 		imageUrl: data.img,
 		imageWidth: 400,
 		imageHeight: 300,
@@ -69,8 +69,8 @@ const orderNow = (data) => {
 const sendMobileOrder = (data) => {
 	const url = `https://wa.me/6283165539138?text=`;
 	Swal.fire({
-		title: `D & N ${data.category} - ${data.title}`,
-		text: `Order ${data.category} - ${data.title} (Rp. ${data.price}) dari D & N Tour Travel`,
+		title: `DN Tour ${data.category} - ${data.title}`,
+		text: `Order ${data.category} - ${data.title} (Rp. ${data.price}) dari DN Tour Travel`,
 		imageUrl: data.img,
 		imageWidth: 400,
 		imageHeight: 300,

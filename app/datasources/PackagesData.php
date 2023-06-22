@@ -129,27 +129,27 @@ class PackagesData {
             [
                 'id' => 1,
                 'img' => '/public/assets/images/gallery/intro.png',
-                'alt' => 'Intro D & N'
+                'alt' => 'Intro DN Tour'
             ],
             [
                 'id' => 2,
                 'img' => '/public/assets/images/gallery/new-bg.jpg',
-                'alt' => 'D & N Tour Travel'
+                'alt' => 'DN Tour Travel'
             ],
             [
                 'id' => 3,
                 'img' => '/public/assets/images/bg-hero.jpg',
-                'alt' => 'D & N For Family'
+                'alt' => 'DN Tour For Family'
             ],
             [
                 'id' => 4,
                 'img' => '/public/assets/images/gallery/hero_1.png',
-                'alt' => 'D & N Rentals'
+                'alt' => 'DN Tour Rentals'
             ],
             [
                 'id' => 5,
                 'img' => '/public/assets/images/gallery/banner2.jpg',
-                'alt' => 'D & N Rentals'
+                'alt' => 'DN Tour Rentals'
             ]
         ];
     }
