@@ -3,4 +3,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://dntourtravel.com
+Sitemap: https://dntourtravel.com/sitemap.xml
