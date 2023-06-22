@@ -54,7 +54,7 @@ class Home {
 			'meta_author' => 'D & N Tour Travel',
 			'og_url' => 'https://dntourtravel.com',
 			'og_type' => 'website',
-			'og_site_name' => 'D & N Tour Travel',
+			'og_site_name' => 'D & N Tour Travel - Sewa Mobil Bandung | Sewa Hiace Bandung',
 			'og_title' => 'D & N Tour Travel - Sewa Mobil Bandung | Sewa Hiace Bandung',
 			'og_desc' => 'Pelayanan kami meliputi :
 				> Sewa Mobil Bandung
@@ -81,7 +81,7 @@ class Home {
         	'hero_img' => !$this->check_mobile ? '/public/assets/images/bg-hero.jpg' : '/public/assets/images/bg-hero.jpg',
         	'bg_img' => '/public/assets/images/bg-new.webp',
         	'favicon' => '/public/assets/favicon.ico',
-            'title' => 'D & N Tour Travel',
+            'title' => 'D & N Tour Travel - Sewa Mobil Bandung | Sewa Hiace Bandung',
             'brand' => 'D & N',
             'tagline' => ' Selamat Datang Di Website <br/> D & N Tour Travel',
 			'desc_title' => 'Pelayanan kami meliputi : <br/>',
