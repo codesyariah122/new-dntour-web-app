@@ -4,6 +4,9 @@
             <span class="text-xs bg-blue-600 rounded-full text-white px-4 py-1.5 mr-3">New</span> <span class="text-sm font-medium">Sewa Mobil </span>&nbsp;<i class="fa-solid fa-angle-down text-lg"></i>
         </a>
         <h2 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl"><?=$data['title']?></h2>
+        <h1 class="text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48 leading-loose">
+            <?=$data['desc_title']?>
+        </h1>        
         <p class="mb-8 text-sm font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48 leading-loose">
             <?=$data['desc']?>
         </p>

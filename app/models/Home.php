@@ -49,8 +49,8 @@ class Home {
 	{
 		return [
 			'canonical' => 'https://dntourtravel.com',
-			'meta_desc' => 'D & N Tour Travel - Sewa Mobil Bandung | Sewa Hiace Bandung',
-			'meta_key' => 'Sewa Mobil Bandung | Sewa Hiace Bandung',
+			'meta_desc' => 'D & N Tour Travel | Sewa Mobile Bandung | Sewa Hiace Bandung | Rental Mobil Bandung | Rental Mobil Bandara',
+			'meta_key' => 'D & N Tour Travel - Sewa Mobil Bandung | Sewa Hiace Bandung',
 			'meta_author' => 'D & N Tour Travel',
 			'og_url' => 'https://dntourtravel.com',
 			'og_type' => 'website',
@@ -84,8 +84,8 @@ class Home {
             'title' => 'D & N Tour Travel',
             'brand' => 'D & N',
             'tagline' => ' Selamat Datang Di Website <br/> D & N Tour Travel',
-            'desc' => 'Pelayanan kami meliputi : <br/>
-            <i class="fa-solid fa-location-arrow"></i>&nbsp;Sewa Mobil Bandung<br/>
+			'desc_title' => 'Pelayanan kami meliputi : <br/>',
+            'desc' => '<i class="fa-solid fa-location-arrow"></i>&nbsp;Sewa Mobil Bandung<br/>
             <i class="fa-solid fa-location-arrow"></i>&nbsp;Paket Drop Off Bandara Soetta <br/>
             <i class="fa-solid fa-location-arrow"></i>&nbsp;Sewa Hiace Bandung<br/>
             <i class="fa-solid fa-location-arrow"></i>&nbsp;Antar Jemput Bandara, Stasiun, Wisuda<br/> Pernikahan, Perjalanan Dinas / Meeting Kantor <br/>
