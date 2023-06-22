@@ -1,10 +1,10 @@
 <section id="tour" class="container mx-auto px-4 py-0">
     <div class="flex justify-center mb-12">
         <div>
-            <h3 class="text-4xl font-bold text-gray-900">Paket City Tour</h3>
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Paket City Tour</h3>
         </div>
     </div>
-    <div class="grid grid-cols-2 gap-4 place-content-center h-auto">
+    <div class="grid grid-cols-1 gap-4 place-content-center h-auto">
         <?php 
         foreach($tours as $tour):
             $category = $helpers->getCategoryName($tours, $tour['category_id']);
@@ -16,7 +16,7 @@
                         <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"><?=$tour['title']?></h5>
                         <div class="col-span-full mt-2 mb-4">
                             <div class="flex justify-start">
-                                <small class="text-md text-gray-600 font-bold">Include : </small>
+                                <small class="text-md text-gray-600 font-bold dark:text-white">Include : </small>
                             </div>
 
                             <div class="flex justify-start space-x-2">
@@ -50,7 +50,7 @@
                     </span>
                 </div>
                 <div class="flex justify-start mt-2">
-                    <a href="javascript:void(0)" onClick="orderNow({
+                    <a href="javascript:void(0)" onClick="sendMobileOrder({
                         img: `<?=$tour['img']?>`, 
                         title: `<?=$tour['title']?>`, 
                         price: `<?=$tour['price']?>`, 
@@ -63,6 +63,6 @@
 <?php endforeach; ?>
 </div>
 
-<hr class="my-24 md:min-w-full" />
+<hr class="my-12 md:min-w-full" />
 
 </section>

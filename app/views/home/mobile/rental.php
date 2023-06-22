@@ -1,7 +1,7 @@
 <section id="rental" class="container mx-auto px-4 py-24">
     <div class="flex justify-center mb-16">
         <div>
-            <h3 class="text-2xl font-bold text-gray-900">Sewa Mobil</h3>
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Sewa Mobil</h3>
         </div>
     </div>
     <div class="grid grid-cols-2 gap-4 place-content-center h-auto mb-4">
@@ -12,14 +12,14 @@
             <div>        
                 <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                     <img class="rounded-t-lg" src="<?=$rental['img']?>" alt="" />
-                    <div class="px-5 pb-5 py-6">
+                    <div class="px-2 pb-5 py-6">
                         <div class="grid grid-cols-1">
                             <div class="col-span-full">     
                                 <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"><?=$rental['title']?></h5>
                             </div>
                             <div class="col-span-full mt-2 mb-4">
                                 <div class="flex justify-start">
-                                    <small class="text-md text-gray-600 font-bold">Include : </small>
+                                    <small class="text-md text-gray-600 font-bold dark:text-white">Include : </small>
                                 </div>
                                 <div class="flex justify-start space-x-2">
                                     <div>
@@ -54,7 +54,7 @@
                     </span>
                 </div>
                 <div class="flex justify-start mt-2">
-                    <a href="javascript:void(0)" onClick="orderNow({
+                    <a href="javascript:void(0)" onClick="sendMobileOrder({
                         img: `<?=$rental['img']?>`, 
                         title: `<?=$rental['title']?>`, 
                         price: `<?=$rental['price']?>`, 
@@ -66,7 +66,5 @@
     </div>
 <?php endforeach; ?>
 </div>
-
-<hr class="my-24 md:min-w-full" />
 
 </section>

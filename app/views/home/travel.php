@@ -4,12 +4,12 @@
             <h3 class="text-4xl font-bold text-gray-900">Drop Off Bandara Soekarno Hatta</h3>
         </div>
     </div>
-    <div class="grid grid-cols-3 gap-4 place-content-center h-auto">
+    <div class="grid grid-cols-2 gap-2 mt-24 place-content-center justify-items-center h-auto">
         <?php 
             foreach($travels as $travel): 
                 $category = $helpers->getCategoryName($travels, $travel['category_id']);
         ?>
-            <div>        
+            <div class="mb-12">        
                 <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                     <img class="rounded-t-lg h-45" src="<?=$travel['img']?>" alt="<?=$travel['title']?>" />
                     <div class="px-5 pb-5 py-6">
@@ -37,6 +37,11 @@
                                 <div>
                                     <span class="bg-blue-100 text-blue-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400">
                                       <i class="fa-solid fa-road-circle-check"></i>&nbsp;Tol
+                                    </span>
+                                </div>
+                                <div>
+                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400">
+                                      <i class="fa-solid fa-gas-pump"></i>&nbsp;BBM
                                     </span>
                                 </div>
                             </div>

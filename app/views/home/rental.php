@@ -4,12 +4,12 @@
             <h3 class="text-4xl font-bold text-gray-900">Sewa Mobil</h3>
         </div>
     </div>
-    <div class="grid grid-cols-3 gap-4 place-content-center h-auto">
+    <div class="grid grid-cols-2 gap-2 justify-items-center place-content-center h-auto mt-24">
         <?php 
         foreach($rentals as $rental): 
             $category = $helpers->getCategoryName($rentals, $rental['category_id']);
             ?>
-            <div>        
+            <div class="mb-12">        
                 <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                     <img class="rounded-t-lg" src="<?=$rental['img']?>" alt="" />
                     <div class="px-5 pb-5 py-6">

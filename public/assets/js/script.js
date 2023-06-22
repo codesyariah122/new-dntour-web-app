@@ -5,6 +5,28 @@
  * @return object dom
 **/
 
+const ads_center = document.querySelector('#google-center-div')
+const ads_wrapper = document.querySelector('#mys-wrapper')
+const ads_mys = document.querySelector('#mys-content')
+const ads_mys_class = document.querySelector('.mys-wrapper')
+
+if (ads_center) {
+    ads_center.remove();
+}
+
+if(ads_wrapper) {
+	ads_wrapper.remove();
+}
+
+if(ads_mys) {
+	ads_mys.remove();
+}
+
+if(ads_mys_class) {
+	ads_mys_class.remove();
+}
+
+
 const sendingWhatsapp = (num) => {
 	const url = `https://wa.me/${num}?text=`;
 	const textWa = "Hello,D & N Tour saya ingin memesan paket perjalanan dari D & N Tour, bisa infokan saya harga terbaik dari D & N Tour.";
@@ -13,10 +35,9 @@ const sendingWhatsapp = (num) => {
 }
 
 const sendOrderWhatsapp = (data) => {
-	const url = `https://wa.me/6283165539138?text=`;
-	const encodeText = encodeURIComponent(data);
-	console.log(data);
-	window.open(`${url}${encodeText}`)
+	const url = `https://wa.me/6283165539138?text=${data}`;
+	// const encodeText = encodeURIComponent(data);
+	window.open(url)
 }
 
 const orderNow = (data) => {
@@ -25,7 +46,7 @@ const orderNow = (data) => {
 		text: `Order ${data.category} - ${data.title} (Rp. ${data.price}) dari D & N Tour Travel`,
 		imageUrl: data.img,
 		imageWidth: 400,
-		imageHeight: 600,
+		imageHeight: 300,
 		background: 'rgba(23, 24, 28, 0.8)',
 		color: '#fff',
 		imageAlt: `${data.category} - ${data.title}`,
@@ -35,10 +56,10 @@ const orderNow = (data) => {
 		confirmButtonText: 'Yes, lanjut!'
 	}).then((result) => {
 		if (result.isConfirmed) {
-			const text = `Hello,D & N Tour saya ingin ${data.category === 'Sewa Mobil' ? data.category : 'memesan'} ${data.category !== 'Sewa Mobil' ? 'paket' : ''} dari D & N Tour, berikut rincian pesanan saya:<br>`
-				+`Category : ${data.category}<br>`
-				+`Mobil : ${data.title}<br>`
-				+`Price : ${data.price}<br>`;
+			const text = `Hello, D%20%26%20N%20Tour.%20Saya%20ingin%20${data.category === 'Sewa Mobil' ? data.category : 'memesan'}%20${data.category !== 'Sewa Mobil' ? 'paket' : ''}%20dari%20D%20%26%20N%20Tour,%20berikut%20rincian%20pesanan%20saya:%0A`
+			+ `Category%20:%20${encodeURIComponent(data.category)}%0A`
+			+ `Mobil%20:%20${encodeURIComponent(data.title)}%0A`
+			+ `Price%20:%20${encodeURIComponent(data.price)}`;
 
 			sendOrderWhatsapp(text);
 		}
@@ -47,10 +68,27 @@ const orderNow = (data) => {
 
 const sendMobileOrder = (data) => {
 	const url = `https://wa.me/6283165539138?text=`;
-	const text = `Hello,D & N Tour saya ingin ${data.category === 'Sewa Mobil' ? data.category : 'memesan'} ${data.category !== 'Sewa Mobil' ? 'paket' : ''} dari D & N Tour, berikut rincian pesanan saya:<br>`
-				+`Category : ${data.category}<br>`
-				+`Mobil : ${data.title}<br>`
-				+`Price : ${data.price}<br>`;
-	const encodeText = encodeURIComponent(text);
-	window.open(`${url}${encodeText}`)
+	Swal.fire({
+		title: `D & N ${data.category} - ${data.title}`,
+		text: `Order ${data.category} - ${data.title} (Rp. ${data.price}) dari D & N Tour Travel`,
+		imageUrl: data.img,
+		imageWidth: 400,
+		imageHeight: 300,
+		background: 'rgba(23, 24, 28, 0.8)',
+		color: '#fff',
+		imageAlt: `${data.category} - ${data.title}`,
+		showCancelButton: true,
+		confirmButtonColor: '#3085d6',
+		cancelButtonColor: '#d33',
+		confirmButtonText: 'Yes, lanjut!'
+	}).then((result) => {
+		if (result.isConfirmed) {
+			const text = `Hello, D%20%26%20N%20Tour.%20Saya%20ingin%20${data.category === 'Sewa Mobil' ? data.category : 'memesan'}%20${data.category !== 'Sewa Mobil' ? 'paket' : ''}%20dari%20D%20%26%20N%20Tour,%20berikut%20rincian%20pesanan%20saya:%0A` +
+			`Category%20:%20${encodeURIComponent(data.category)}%0A` +
+			`Mobil%20:%20${encodeURIComponent(data.title)}%0A` +
+			`Price%20:%20${encodeURIComponent(data.price)}`;
+
+			sendOrderWhatsapp(text);
+		}
+	})
 }

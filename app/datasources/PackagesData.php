@@ -50,8 +50,15 @@ class PackagesData {
                 'category_id' => 1,
                 'title' => 'Hiace',
                 'price' => number_format(980000, 0, ',', '.'),
-                'img' => '/public/assets/images/cars/hiace.png'
-            ]
+                'img' => '/public/assets/images/cars/Toyota-Hiace.png'
+            ],
+            [
+                'id' => 4,
+                'category_id' => 1,
+                'title' => 'Fortuner',
+                'price' => number_format(1500000, 0, ',', '.'),
+                'img' => '/public/assets/images/cars/fortuner.png'
+            ],
         ];
     }
 
@@ -77,8 +84,15 @@ class PackagesData {
                 'category_id' => 2,
                 'title' => 'Hiace',
                 'price' => number_format(1340000, 0, ',', '.'),
-                'img' => '/public/assets/images/cars/hiace.png'
-            ]
+                'img' => '/public/assets/images/cars/Toyota-Hiace.png'
+            ],
+            [
+                'id' => 4,
+                'category_id' => 1,
+                'title' => 'Fortuner',
+                'price' => number_format(2300000, 0, ',', '.'),
+                'img' => '/public/assets/images/cars/fortuner.png'
+            ],
         ];
     }
 
@@ -124,17 +138,17 @@ class PackagesData {
             ],
             [
                 'id' => 3,
-                'img' => '/public/assets/images/gallery/changing-family.jpg',
+                'img' => '/public/assets/images/bg-hero.jpg',
                 'alt' => 'D & N For Family'
             ],
             [
                 'id' => 4,
-                'img' => '/public/assets/images/gallery/hero-again.png',
+                'img' => '/public/assets/images/gallery/hero_1.png',
                 'alt' => 'D & N Rentals'
             ],
             [
                 'id' => 5,
-                'img' => '/public/assets/images/gallery/new-hero-again.webp',
+                'img' => '/public/assets/images/gallery/banner2.jpg',
                 'alt' => 'D & N Rentals'
             ]
         ];

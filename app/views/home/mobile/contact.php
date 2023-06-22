@@ -1,7 +1,7 @@
 <section id="contact" class="container mx-auto px-4 py-24">
   <div class="flex justify-center mb-16">
     <div>
-      <h3 class="text-4xl font-bold text-gray-900">Our Contact</h3>
+      <h3 class="text-4xl font-bold text-gray-900 dark:text-white">Our Contact</h3>
     </div>
   </div>
   <div class="w-full bg-white border-none rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">

@@ -6,40 +6,40 @@
   background: url('../icons/van.png') no-repeat center center;
   background-size: cover;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
 }
 
 .icon-car {
   background: url('../icons/car.png') no-repeat center center;
   background-size: cover;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
 }
 
 .icon-driver {
   background: url('../icons/professional-driver.jpg') no-repeat center center;
   background-size: cover;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
 }
 
 .icon-driver-license {
   background: url('../icons/driving-license.avif') no-repeat center center;
   background-size: cover;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
 }
 
 .icon-time {
   background: url('../icons/time.png') no-repeat center center;
   background-size: cover;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
 }
 
 .icon-on-time {
