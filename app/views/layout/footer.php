@@ -1,4 +1,6 @@
-		<?php require_once 'partials/footer_content.php'; ?>
+		<section id="footer" class="container mx-auto px-4 py-24 dark:bg-gray-800">
+			<?php require_once 'partials/footer_content.php'; ?>
+		</section>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
 

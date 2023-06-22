@@ -85,7 +85,7 @@ const sendMobileOrder = (data) => {
 		if (result.isConfirmed) {
 			const text = `Hello, D%20%26%20N%20Tour.%20Saya%20ingin%20${data.category === 'Sewa Mobil' ? data.category : 'memesan'}%20${data.category !== 'Sewa Mobil' ? 'paket' : ''}%20dari%20D%20%26%20N%20Tour,%20berikut%20rincian%20pesanan%20saya:%0A` +
 			`Category%20:%20${encodeURIComponent(data.category)}%0A` +
-			`Mobil%20:%20${encodeURIComponent(data.title)}%0A` +
+			`$Mobil%20:%20${encodeURIComponent(data.title)}%0A` +
 			`Price%20:%20${encodeURIComponent(data.price)}`;
 
 			sendOrderWhatsapp(text);

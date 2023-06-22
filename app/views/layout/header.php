@@ -69,6 +69,6 @@
 
 
   </head>
-<body>
+<body class="flex flex-col min-h-screen">
 
   <?php require_once $partials['navbar']; ?>
