@@ -82,7 +82,7 @@ class Home {
         	'hero_img' => !$this->check_mobile ? '/public/assets/images/bg-hero.jpg' : '/public/assets/images/bg-hero.jpg',
         	'bg_img' => '/public/assets/images/bg-new.webp',
         	'favicon' => '/public/assets/favicon.ico',
-            'title' => 'DN Tour Travel <br/> Sewa Mobil Bandung - Sewa Hiace Bandung',
+            'title' => 'DN Tour Travel | Sewa Mobil Bandung - Sewa Hiace Bandung',
             'brand' => 'DN Tour',
             'tagline' => ' Selamat Datang Di Website <br/> DN Tour Travel',
 			'desc_title' => 'Pelayanan kami meliputi : <br/>',
