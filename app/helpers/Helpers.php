@@ -57,9 +57,11 @@ class Helpers {
 
 	public function format_wa_send($data)
 	{
+		$mobil = $data['category'] !== 'Paket City Tour' ? "Mobil: " . $data['title']. ",\n" : '' ;
+
 		$text = "Hello, D&N Tour. Saya ingin " . ($data['category'] === 'Sewa Mobil' ? $data['category'] : 'memesan') . " " . ($data['category'] !== 'Sewa Mobil' ? 'paket' : '') . " dari D&N Tour, berikut rincian pesanan saya:\n"
 		. "Category: " . $data['category'] . ",\n"
-		. $data['category'] !== 'Paket City Tour' ? "Mobil: " . $data['title'] : '' . ",\n"
+		. $mobil
 		. "Price: " . $data['price'];
 
 		return str_replace(' ', '+', urlencode($text));
