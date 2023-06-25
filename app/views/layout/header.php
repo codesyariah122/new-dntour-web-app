@@ -3,52 +3,19 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
      <style type="text/css" rel="stylesheet">
-      .mys-wrapper {
-        display: none !important;
-      }
-      #mys-wrapper {
-        display: none!important;
-      }
-      #mys-content {
-        display: none !important;
-      }
-      #reveal-ad {
-        display: none !important;
-      }
-      #expander-glasspane {
-        display: none !important;
-      }
       body.swal2-shown > [aria-hidden="true"] {
         transition: 0.1s filter;
         filter: blur(10px);
       }
     </style>
+
      <script type="text/javascript" async src="https://www.google-analytics.com/analytics.js"></script>
 
-    <script async src="https://www.googletagmanager.com/gtm.js?id=<?=$meta['tagm_id']?>"></script>
 
-    <script type="text/javascript" async src="https://www.googletagmanager.com/gtag/js?id=<?=$meta['gtag_id']?>&l=dataLayer&cx=c"></script>
-
-    <script  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" client="<?=$meta['google_ads_key']?>" crossorigin="anonymous" async></script>
-    
-    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script type="text/javascript">
-      (adsbygoogle = window.adsbygoogle || []).push({
-        google_ad_client: '<?=$meta['google_ads_key']?>',
-        enable_page_level_ads: true
-      });
-    </script> -->
-
-
-    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <ins class="adsbygoogle"
-    style="display:inline-block;width:728px;height:90px"
-    data-ad-client="ca-<?=$meta['google_ads_key']?>"
-    data-ad-slot="1234567890"></ins>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script> -->
+     <!-- Meta google tag -->
+    <?php require_once $partials['meta_google_tag']; ?>
 
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -74,12 +41,11 @@
     <meta property="og:image:width" content="<?=$meta['og_image_width']?>" />
     <meta property="og:image:height" content="<?=$meta['og_image_height']?>" />
 
-    <title><?=$data['title']?></title>
+    <title><?=$meta['head_title']?></title>
 
     <link rel="shortcut icon" href="<?=$data['favicon']?>">
 
-
   </head>
+
 <body class="flex flex-col min-h-screen">
 
-  <?php require_once $partials['navbar']; ?>

@@ -13,3 +13,15 @@
         </p>
     </div>
 </section>
+
+
+<script type="text/javascript">
+    $('#hero-cta').click(function(e) {
+        e.preventDefault(); 
+        let target = $(this).attr('href');
+        let offset = $(target).offset().top;
+        $('html, body').animate({
+          scrollTop: offset
+      }, 800);
+    });
+</script>

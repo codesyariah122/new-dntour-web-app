@@ -20,43 +20,60 @@ class Home {
 		$this->check_mobile = $this->helpers->isMobileDevice();
 	}
 
-	public function getPartials()
+	public function getPartials($page)
 	{
-		$partials = [
-			'loading' => 'app/views/home/loading.php',
-			'hero' => !$this->check_mobile ? 'app/views/home/hero.php' : 'app/views/home/mobile/hero.php',
-			'panel' => !$this->check_mobile ? 'app/views/home/panel.php' : 'app/views/home/mobile/panel.php',
-			'rental' => !$this->check_mobile ? 'app/views/home/rental.php' : 'app/views/home/mobile/rental.php',
-			'travel' => !$this->check_mobile ? 'app/views/home/travel.php' : 'app/views/home/mobile/travel.php',
-			'tour' => !$this->check_mobile ? 'app/views/home/tour.php' : 'app/views/home/mobile/tour.php',
-			'blog' => 'app/views/home/blog.php',
-			'gallery' => 'app/views/home/gallery.php',
-			'contact' => !$this->check_mobile ? 'app/views/home/contact.php' : 'app/views/home/mobile/contact.php',
-			'ads' => !$this->check_mobile ? 'app/views/home/ads.php' : 'app/views/home/mobile/ads.php',
-			'whatsapp' => !$this->check_mobile ? 'app/views/home/whatsapp.php' : 'app/views/home/mobile/whatsapp.php',
-		];
+		// var_dump($page); die;
+		if($page === 'home') {
+			$partials = [
+				'loading' => 'app/views/home/loading.php',
+				'hero' => !$this->check_mobile ? 'app/views/home/hero.php' : 'app/views/home/mobile/hero.php',
+				'panel' => !$this->check_mobile ? 'app/views/home/panel.php' : 'app/views/home/mobile/panel.php',
+				'rental' => !$this->check_mobile ? 'app/views/home/rental.php' : 'app/views/home/mobile/rental.php',
+				'travel' => !$this->check_mobile ? 'app/views/home/travel.php' : 'app/views/home/mobile/travel.php',
+				'tour' => !$this->check_mobile ? 'app/views/home/tour.php' : 'app/views/home/mobile/tour.php',
+				'blog' => 'app/views/home/blog.php',
+				'gallery' => 'app/views/home/gallery.php',
+				'contact' => !$this->check_mobile ? 'app/views/home/contact.php' : 'app/views/home/mobile/contact.php',
+				'whatsapp' => !$this->check_mobile ? 'app/views/home/whatsapp.php' : 'app/views/home/mobile/whatsapp.php',
+			];
+			$scripts = ['/public/assets/js/contentful-init.js', '/public/assets/js/script.js', '/public/assets/js/nav.js'];
+			
+		} elseif($page === 'blog') {
+			$partials = [
+				'loading' => 'app/views/home/loading.php',
+				'hero' => !$this->check_mobile ? 'app/views/blog/hero.php' : 'app/views/blog/mobile/hero.php',
+				'content' => 'app/views/blog/content.php',
+				'whatsapp' => !$this->check_mobile ? 'app/views/home/whatsapp.php' : 'app/views/home/mobile/whatsapp.php',
+			];
 
-		$scripts = ['/public/assets/js/script.js', '/public/assets/js/nav.js', '/public/assets/js/contentful-init.js'];
+			$scripts = ['/public/assets/js/marked.umd.min.js', '/public/assets/js/contentful-init.js', '/public/assets/js/blog/script.js'];
 
+		} else {
+			$partials = [];
+			$scripts = [];
+		}
+
+	
 		return [
-			'navbar' => 'app/views/layout/partials/navbar.php',
+			'meta_google_tag' => 'app/views/layout/partials/google_meta.php',
+			'navbar' => $page === 'home' ? 'app/views/layout/partials/navbar.php' : 'app/views/blog/partials/navbar.php',
 			'footer_content' => 'app/views/layouts/partials/footer_content.php',
 			'homes' => $partials,
 			'scripts' => $scripts
 		];
 	}
 
-	public function getMetaTag() 
+	public function getMetaTag($title) 
 	{
 		return [
 			'canonical' => 'https://dntourtravel.com',
 			'meta_desc' => 'DN Tour Travel | Sewa Mobile Bandung | Sewa Hiace Bandung | Rental Mobil Bandung | Rental Mobil Bandara',
-			'meta_key' => 'DN Tour Travel - Sewa Mobil Bandung | Sewa Hiace Bandung',
+			'meta_key' => $title,
 			'meta_author' => 'DN Tour Travel',
 			'og_url' => 'https://dntourtravel.com',
 			'og_type' => 'website',
 			'og_site_name' => 'DN Tour Travel - Sewa Mobil Bandung | Sewa Hiace Bandung',
-			'og_title' => 'DN Tour Travel - Sewa Mobil Bandung | Sewa Hiace Bandung',
+			'og_title' => $title,
 			'og_desc' => 'Pelayanan kami meliputi :
 				> Sewa Mobil Bandung
 				> Paket Drop Off Bandara Soetta
@@ -70,7 +87,8 @@ class Home {
 			'og_image_height' => '600',
 			'google_ads_key' => 'pub-3269967595614450',
 			'gtag_id' => 'UA-255953477-1',
-			'tagm_id' => 'GTM-54WQ4Z5'
+			'tagm_id' => 'GTM-54WQ4Z5',
+			'head_title' => $title
 		];
 	}
 
@@ -82,7 +100,7 @@ class Home {
         	'hero_img' => !$this->check_mobile ? '/public/assets/images/bg-hero.jpg' : '/public/assets/images/bg-hero.jpg',
         	'bg_img' => '/public/assets/images/bg-new.webp',
         	'favicon' => '/public/assets/favicon.ico',
-            'title' => 'DN Tour Travel | Sewa Mobil Bandung - Sewa Hiace Bandung',
+            'title' => 'DN Tour Travel <br/> Sewa Mobil Bandung - Sewa Hiace Bandung',
             'brand' => 'DN Tour',
             'tagline' => ' Selamat Datang Di Website <br/> DN Tour Travel',
 			'desc_title' => 'Pelayanan kami meliputi : <br/>',

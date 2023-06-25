@@ -46,6 +46,156 @@
   background: url('../icons/ontime.jpg') no-repeat center center;
   background-size: cover;
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
+}
+
+@media (min-width: 768px) {
+  .icon-van {
+    background: url('../icons/van.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
+
+  .icon-car {
+    background: url('../icons/car.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
+
+  .icon-driver {
+    background: url('../icons/professional-driver.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
+
+  .icon-driver-license {
+    background: url('../icons/driving-license.avif') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
+
+  .icon-time {
+    background: url('../icons/time.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
+
+  .icon-on-time {
+    background: url('../icons/ontime.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .icon-van {
+    background: url('../icons/van.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
+
+  .icon-car {
+    background: url('../icons/car.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
+
+  .icon-driver {
+    background: url('../icons/professional-driver.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
+
+  .icon-driver-license {
+    background: url('../icons/driving-license.avif') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
+
+  .icon-time {
+    background: url('../icons/time.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
+
+  .icon-on-time {
+    background: url('../icons/ontime.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .icon-van {
+    background: url('../icons/van.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
+
+  .icon-car {
+    background: url('../icons/car.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
+
+  .icon-driver {
+    background: url('../icons/professional-driver.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
+
+  .icon-driver-license {
+    background: url('../icons/driving-license.avif') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
+
+  .icon-time {
+    background: url('../icons/time.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
+
+  .icon-on-time {
+    background: url('../icons/ontime.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+  }
 }

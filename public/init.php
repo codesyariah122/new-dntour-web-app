@@ -15,13 +15,9 @@ spl_autoload_register(function($class) {
     require_once $file;
 });
 
-$url = $_SERVER['REQUEST_URI'];    
-use app\controllers\HomeController;
+use app\config\Router;
 
-if($url != '/'){
-    http_response_code(404);
-}else{
-    $controller = new HomeController();
-    $controller->index();
-}      
+$init = new Router;
+
+$init->exec();
   
