@@ -22,6 +22,7 @@ class Router {
 
         if($path !== "") {
             $slug = basename($path);
+            
             if($slug !== 'blog'):
                 $this->blog->detail($slug);
             else:

@@ -12,7 +12,7 @@ const ads_mys_class = document.querySelector('.mys-wrapper')
 
 // Typing text assign
 const textElement = document.getElementById("typing");
-const text = "Sewa Mobil Bandung | Sewa Hiace Bandung";
+const text = "Sewa Mobil Bandung - Sewa Hiace Bandung";
 const typingDelay = 200;
 const erasingDelay = 50;
 const newTextDelay = 2000;

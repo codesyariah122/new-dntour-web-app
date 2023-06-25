@@ -53,12 +53,7 @@
                     <span class="text-xl font-bold text-gray-900 dark:text-white">
                         Rp. <?=$rental['price']?>
                     </span>
-                    <a href="javascript:void(0)" onClick="orderNow({
-                        img: `<?=$rental['img']?>`, 
-                        title: `<?=$rental['title']?>`, 
-                        price: `<?=$rental['price']?>`, 
-                        category: `<?=$category?>`
-                    })" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Pesan Sekarang</a>
+                    <a href="https://wa.me/<?=$data['phone']?>?text=<?=$helpers->format_wa_send(['img' => $rental['img'], 'title' => $rental['title'], 'price' => $rental['price'], 'category' => $category])?>"  class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" target="_blank">Pesan Sekarang</a>
                 </div>
             </div>
         </div>

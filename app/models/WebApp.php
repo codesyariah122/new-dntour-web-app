@@ -104,7 +104,6 @@ class WebApp {
 
     public function getData() 
     {
-        // Logika untuk mengambil data dari database atau sumber data lainnya
         return [
         	'logo' => '/public/assets/img/D&N-Logo.png',
         	'hero_img' => !$this->check_mobile ? '/public/assets/images/bg-hero.jpg' : '/public/assets/images/bg-hero.jpg',
@@ -128,7 +127,7 @@ class WebApp {
             	Kami telah berpengalaman selama bertahun – tahun di bidang jasa antar jemput Bandung - Jakarta (Bandara Soetta) dan trip wisata, sehingga kami sangat berpengalaman dan profesional.
             	<br/><br/>
             	DN Tour Travel menawarkan beberapa layanan jasa yang dapat Anda pilih sesuai dengan kebutuhan Anda. Layanan jasa kami yang menjadi prioritas ialah antar jemput Bandung – Jakarta (Bandara Soetta). Semua layanan yang kami tawarkan dibanderol dengan harga yang ekonomis dan terjangkau serta lengkap dengan driver / sopir profesional yang sudah memiliki perizinan mengemudi secara legal dari pihak yang berwenang.',
-
+            'phone' => '6283165539138',
             // For data products
             'rentals' => ['data' => $this->datasources->rentals()],
 
