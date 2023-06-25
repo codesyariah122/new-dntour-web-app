@@ -8,8 +8,9 @@ namespace app\models;
 
 use app\helpers\{Helpers};
 use app\datasources\{PackagesData};
+use app\config\Environment;
 
-class Home {
+class WebApp {
 
 	private $helpers, $datasources, $filterCategory, $check_mobile;
 
@@ -72,6 +73,9 @@ class Home {
 
 	public function getMetaTag($title) 
 	{
+		$env = new Environment;
+		$env->config();
+		
 		return [
 			'canonical' => 'https://dntourtravel.com',
 			'meta_desc' => 'DN Tour Travel | Sewa Mobil Bandung | Sewa Hiace Bandung | Rental Mobil Bandung | Rental Mobil Bandara',
@@ -92,9 +96,9 @@ class Home {
 			'og_image' => 'https://images.ctfassets.net/hm3eztweb2rs/fxNBlorDiVrLSffPDc3eG/f03a8f6e6aa817cec8060818f6f445c1/about-dn.jpg?h=250',
 			'og_image_width' => '600',
 			'og_image_height' => '600',
-			'google_ads_key' => 'pub-3269967595614450',
-			'gtag_id' => 'UA-255953477-1',
-			'tagm_id' => 'GTM-54WQ4Z5',
+			'google_ads_key' => GOOGLE_CA_KEY,
+			'gtag_id' => GTM_ID,
+			'tagm_id' => GTM_KEY,
 			'head_title' => $title
 		];
 	}

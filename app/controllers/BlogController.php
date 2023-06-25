@@ -6,7 +6,7 @@
 
 namespace app\controllers;
 
-use app\models\{Home};
+use app\models\WebApp;
 
 class BlogController {
 
@@ -17,7 +17,7 @@ class BlogController {
 
 	public function views($views, $param)
 	{
-		$model = new Home();
+		$model = new WebApp();
 		$data = $model->getData();
 		$meta = $model->getMetaTag($param['title']);
 		$partials = $model->getPartials($param['page']);
