@@ -59,7 +59,7 @@ class Helpers {
 	{
 		$text = "Hello, D&N Tour. Saya ingin " . ($data['category'] === 'Sewa Mobil' ? $data['category'] : 'memesan') . " " . ($data['category'] !== 'Sewa Mobil' ? 'paket' : '') . " dari D&N Tour, berikut rincian pesanan saya:\n"
 		. "Category: " . $data['category'] . ",\n"
-		. "Mobil: " . $data['title'] . ",\n"
+		. $data['category'] !== 'Paket City Tour' ? "Mobil: " . $data['title'] : '' . ",\n"
 		. "Price: " . $data['price'];
 
 		return str_replace(' ', '+', urlencode($text));
