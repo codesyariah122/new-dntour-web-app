@@ -17,14 +17,14 @@
     <?php if($partials['google_ads']): require_once $partials['google_ads']; endif;?>
 
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css"  rel="stylesheet" />
+    <script src="<?=$data['vendor']['tailwind']?>"></script>
+    <link href="<?=$data['vendor']['flowbite']['css']?>"  rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Poppins:wght@900&family=Quicksand:wght@500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="/public/assets/css/style.css" />
     <link rel="stylesheet" type="text/css" href="/public/assets/css/icons.css" />
 
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="<?=$data['vendor']['sweetalert']?>"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <link rel="canonical" href="<?=$meta['canonical']?>" />

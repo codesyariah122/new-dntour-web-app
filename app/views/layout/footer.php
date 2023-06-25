@@ -3,9 +3,9 @@
 			<?php require_once 'partials/footer_content.php'; ?>
 		</section>
 
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+		<script src="<?=$data['vendor']['flowbite']['js']?>"></script>
 
-		<script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+		<script src="<?=$data['vendor']['contentful']?>"></script>
 
 		<script type="text/javascript">
 			let client = contentful.createClient({

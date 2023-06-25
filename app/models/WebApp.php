@@ -140,7 +140,17 @@ class WebApp {
 
             'sliders' => ['data' => $this->datasources->sliders()],
             'contentful_token' => CONTENTFUL_TOKEN,
-            'contentful_space' => CONTENTFUL_SPACE
+            'contentful_space' => CONTENTFUL_SPACE,
+            'vendor' => [
+				'tailwind' => '/public/assets/vendor/js/tailwind.js',
+				'fontawesome' => '/public/assets/vendor/css/all.min.css',
+				'flowbite' => [
+					'css' => '/public/assets/vendor/css/flowbite.min.css',
+					'js' => '/public/assets/vendor/js/flowbite.min.js',
+				],
+				'contentful' => '/public/assets/vendor/js/contentful.browser.min.js',
+				'sweetalert' => '/public/assets/vendor/js/sweetalert2@11.js'
+			],
         ];
     }
 }
