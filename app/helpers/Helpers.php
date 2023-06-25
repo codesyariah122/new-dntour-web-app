@@ -58,9 +58,9 @@ class Helpers {
 	public function format_wa_send($data)
 	{
 		$text = "Hello, D&N Tour. Saya ingin " . ($data['category'] === 'Sewa Mobil' ? $data['category'] : 'memesan') . " " . ($data['category'] !== 'Sewa Mobil' ? 'paket' : '') . " dari D&N Tour, berikut rincian pesanan saya:\n"
-		. "Category: " . urlencode($data['category']) . "\n"
-		. "Mobil: " . urlencode($data['title']) . "\n"
-		. "Price: " . urlencode($data['price']);
+		. "Category: " . $data['category'] . ",\n"
+		. "Mobil: " . $data['title'] . ",\n"
+		. "Price: " . $data['price'];
 
 		return str_replace(' ', '+', urlencode($text));
 	}
