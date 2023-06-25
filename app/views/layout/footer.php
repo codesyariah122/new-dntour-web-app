@@ -7,6 +7,13 @@
 
 		<script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
 
+		<script type="text/javascript">
+			let client = contentful.createClient({
+				space: '<?=$data['contentful_space'];?>',
+				accessToken: '<?=$data['contentful_token'];?>'
+			});
+		</script>
+
 		<?php for($i=0; $i < count($partials['scripts']); $i++): ?>
 			<script type="text/javascript" src="<?=$partials['scripts'][$i]?>"></script>
 		<?php endfor;?>

@@ -131,7 +131,7 @@ function domElement (data) {
   blogSelector.appendChild(newEl);
 }
 
-
+// Contentful fetch
 getBlogContent()
 .then((data) => {
   data.map((blog) => {

@@ -1,8 +1,3 @@
-let client = contentful.createClient({
-  space: 'hm3eztweb2rs',
-  accessToken: 'Ja5jwDNyj2buGBSyQpO3MLiiigOs8ayyo8V6wWt5EL4',
-});
-
 async function getBlogContent() {
   try {
     if (!client) return 0;

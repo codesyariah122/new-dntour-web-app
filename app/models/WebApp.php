@@ -12,13 +12,15 @@ use app\config\Environment;
 
 class WebApp {
 
-	private $helpers, $datasources, $filterCategory, $check_mobile;
+	private $helpers, $datasources, $filterCategory, $check_mobile, $env;
 
 	public function __construct()
 	{
+		$this->env = new Environment;
 		$this->helpers = new Helpers;
 		$this->datasources = new PackagesData;
 		$this->check_mobile = $this->helpers->isMobileDevice();
+		$this->env->config();
 	}
 
 	public function getPartials($page)
@@ -72,10 +74,7 @@ class WebApp {
 	}
 
 	public function getMetaTag($title) 
-	{
-		$env = new Environment;
-		$env->config();
-		
+	{	
 		return [
 			'canonical' => 'https://dntourtravel.com',
 			'meta_desc' => 'DN Tour Travel | Sewa Mobil Bandung | Sewa Hiace Bandung | Rental Mobil Bandung | Rental Mobil Bandara',
@@ -139,7 +138,9 @@ class WebApp {
 
             'categories' => ['data' => $this->datasources->categories()],
 
-            'sliders' => ['data' => $this->datasources->sliders()]
+            'sliders' => ['data' => $this->datasources->sliders()],
+            'contentful_token' => CONTENTFUL_TOKEN,
+            'contentful_space' => CONTENTFUL_SPACE
         ];
     }
 }

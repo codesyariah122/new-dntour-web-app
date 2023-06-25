@@ -73,6 +73,8 @@ function domElement (data) {
   blogDetail.appendChild(newEl);
 }
 
+
+// Contentful fetch
 getBlogContent()
 .then((data) => {
 	const posts = data.map((post) => post)
