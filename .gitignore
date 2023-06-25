@@ -1,2 +1,5 @@
 /vendor
 .env
+ads.txt
+robots.txt
+sitemap.xml
