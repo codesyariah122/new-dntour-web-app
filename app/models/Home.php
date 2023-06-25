@@ -24,6 +24,8 @@ class Home {
 	{
 		// var_dump($page); die;
 		if($page === 'home') {
+			$google_ads = '';
+			$google_tag = 'app/views/layout/partials/google_meta.php';
 			$partials = [
 				'loading' => 'app/views/home/loading.php',
 				'hero' => !$this->check_mobile ? 'app/views/home/hero.php' : 'app/views/home/mobile/hero.php',
@@ -39,26 +41,31 @@ class Home {
 			$scripts = ['/public/assets/js/contentful-init.js', '/public/assets/js/script.js', '/public/assets/js/nav.js'];
 			
 		} elseif($page === 'blog') {
+			$google_ads = 'app/views/layout/partials/google_ads.php';
+			$google_tag = 'app/views/layout/partials/google_meta.php';
 			$partials = [
 				'loading' => 'app/views/home/loading.php',
 				'hero' => !$this->check_mobile ? 'app/views/blog/hero.php' : 'app/views/blog/mobile/hero.php',
-				'content' => 'app/views/blog/content.php',
+				'content' => !$this->check_mobile ? 'app/views/blog/content.php' : 'app/views/blog/mobile/content.php',
 				'whatsapp' => !$this->check_mobile ? 'app/views/home/whatsapp.php' : 'app/views/home/mobile/whatsapp.php',
 			];
 
 			$scripts = ['/public/assets/js/marked.umd.min.js', '/public/assets/js/contentful-init.js', '/public/assets/js/blog/script.js'];
 
 		} else {
+			$google_ads = '';
+			$google_tag = '';
 			$partials = [];
 			$scripts = [];
 		}
 
 	
 		return [
-			'meta_google_tag' => 'app/views/layout/partials/google_meta.php',
+			'meta_google_tag' => $google_tag,
+			'google_ads' => $google_ads,
 			'navbar' => $page === 'home' ? 'app/views/layout/partials/navbar.php' : 'app/views/blog/partials/navbar.php',
 			'footer_content' => 'app/views/layouts/partials/footer_content.php',
-			'homes' => $partials,
+			'views' => $partials,
 			'scripts' => $scripts
 		];
 	}
@@ -67,7 +74,7 @@ class Home {
 	{
 		return [
 			'canonical' => 'https://dntourtravel.com',
-			'meta_desc' => 'DN Tour Travel | Sewa Mobile Bandung | Sewa Hiace Bandung | Rental Mobil Bandung | Rental Mobil Bandara',
+			'meta_desc' => 'DN Tour Travel | Sewa Mobil Bandung | Sewa Hiace Bandung | Rental Mobil Bandung | Rental Mobil Bandara',
 			'meta_key' => $title,
 			'meta_author' => 'DN Tour Travel',
 			'og_url' => 'https://dntourtravel.com',
@@ -100,10 +107,10 @@ class Home {
         	'hero_img' => !$this->check_mobile ? '/public/assets/images/bg-hero.jpg' : '/public/assets/images/bg-hero.jpg',
         	'bg_img' => '/public/assets/images/bg-new.webp',
         	'favicon' => '/public/assets/favicon.ico',
-            'title' => 'DN Tour Travel <br/> Sewa Mobil Bandung - Sewa Hiace Bandung',
+            'title' => 'DN Tour Travel',
+            'tagline' => 'Sewa Mobil Bandung - Sewa Hiace Bandung',
             'brand' => 'DN Tour',
-            'tagline' => ' Selamat Datang Di Website <br/> DN Tour Travel',
-			'desc_title' => 'Pelayanan kami meliputi : <br/>',
+			'desc_title' => 'Pelayanan kami meliputi :',
             'desc' => '<i class="fa-solid fa-location-arrow"></i>&nbsp;Sewa Mobil Bandung<br/>
             <i class="fa-solid fa-location-arrow"></i>&nbsp;Paket Drop Off Bandara Soetta <br/>
             <i class="fa-solid fa-location-arrow"></i>&nbsp;Sewa Hiace Bandung<br/>

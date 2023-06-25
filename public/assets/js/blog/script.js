@@ -64,7 +64,7 @@ function domElement (data) {
   	</div>
    </div>
 
-   	<article class="w-10/12 mx-auto whitespace-normal leading-loose text-md lg:text-lg text-gray-800">
+   	<article class="w-10/12 mx-auto whitespace-normal leading-loose text-md lg:text-lg text-gray-800 dark:text-white">
    		${data.content}
    	</article>
   `

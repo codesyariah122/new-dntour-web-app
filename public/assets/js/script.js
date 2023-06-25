@@ -10,6 +10,16 @@ const ads_wrapper = document.querySelector('#mys-wrapper')
 const ads_mys = document.querySelector('#mys-content')
 const ads_mys_class = document.querySelector('.mys-wrapper')
 
+// Typing text assign
+const textElement = document.getElementById("typing");
+const text = "Sewa Mobil Bandung | Sewa Hiace Bandung";
+const typingDelay = 200;
+const erasingDelay = 50;
+const newTextDelay = 2000;
+let index = 0;
+let isDeleting = false;
+
+// Check ads class
 if (ads_center) {
     ads_center.remove();
 }
@@ -135,3 +145,32 @@ getBlogContent()
   }, 1500)
 })
 .catch(err => console.error(err))
+
+
+function typeWriter() {
+  const currentText = text.substring(0, index);
+
+  if (isDeleting) {
+    textElement.textContent = currentText;
+    index--;
+
+    if (index === 0) {
+      isDeleting = false;
+      setTimeout(typeWriter, newTextDelay); // Jeda setelah penghapusan selesai
+    } else {
+      setTimeout(typeWriter, erasingDelay);
+    }
+  } else {
+    textElement.textContent = currentText;
+    index++;
+
+    if (index === text.length) {
+      isDeleting = true;
+      setTimeout(typeWriter, newTextDelay); // Jeda setelah pengetikan selesai
+    } else {
+      setTimeout(typeWriter, typingDelay);
+    }
+  }
+}
+
+typeWriter();

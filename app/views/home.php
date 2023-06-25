@@ -4,7 +4,7 @@
 
 <main class="bg-white dark:bg-gray-800 dark:text-white">
 	<?php
-	foreach($partials['homes'] as $home):
+	foreach($partials['views'] as $home):
 		require_once $home;
 	endforeach;
 	?>

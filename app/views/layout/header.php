@@ -11,11 +11,10 @@
       }
     </style>
 
-     <script type="text/javascript" async src="https://www.google-analytics.com/analytics.js"></script>
-
-
      <!-- Meta google tag -->
-    <?php require_once $partials['meta_google_tag']; ?>
+    <?php require_once $partials['meta_google_tag'];?>
+
+    <?php if($partials['google_ads']): require_once $partials['google_ads']; endif;?>
 
 
     <script src="https://cdn.tailwindcss.com"></script>
