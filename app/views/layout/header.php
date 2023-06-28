@@ -12,7 +12,7 @@
     </style>
 
      <!-- Meta google tag -->
-    <?php require_once $partials['meta_google_tag'];?>
+    <?php if($partials['meta_google_tag']): require_once  $partials['meta_google_tag']; endif;?>
 
     <?php if($partials['google_ads']): require_once $partials['google_ads']; endif;?>
 
@@ -45,6 +45,4 @@
     <link rel="shortcut icon" href="<?=$data['favicon']?>">
 
   </head>
-
-<body class="flex flex-col min-h-screen">
 

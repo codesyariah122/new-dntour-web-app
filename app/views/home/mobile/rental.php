@@ -12,7 +12,7 @@
             ?>
             <div>        
                 <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                    <img class="rounded-t-lg" src="<?=$rental['img']?>" alt="" />
+                    <img class="rounded-t-lg" src="<?=$rental['img']?>" alt="<?=$rental['title']?>" />
                     <div class="px-2 pb-5 py-6">
                         <div class="grid grid-cols-1">
                             <div class="col-span-full">     

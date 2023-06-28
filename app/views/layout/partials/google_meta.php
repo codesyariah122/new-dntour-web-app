@@ -7,4 +7,4 @@
 
 <script  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" client="<?=$meta['google_ads_key']?>" crossorigin="anonymous" async></script>
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->

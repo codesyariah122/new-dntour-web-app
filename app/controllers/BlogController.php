@@ -10,11 +10,6 @@ use app\models\WebApp;
 
 class BlogController {
 
-	public function __construct()
-	{
-		
-	}
-
 	public function views($views, $param)
 	{
 		$model = new WebApp();
@@ -29,7 +24,7 @@ class BlogController {
 
 	public function index() 
 	{
-		echo "Hallo World";
+		echo "Blog Page";
 	}
 
 	public function detail($slug)

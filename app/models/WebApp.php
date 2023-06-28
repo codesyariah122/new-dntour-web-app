@@ -55,7 +55,15 @@ class WebApp {
 
 			$scripts = ['/public/assets/js/marked.umd.min.js', '/public/assets/js/contentful-init.js', '/public/assets/js/blog/script.js'];
 
-		} else {
+		} elseif($page === '404') {
+			// var_dump("Error 404"); die;
+			$google_ads = '';
+			$google_tag = '';
+			$partials = [
+				'error_404_content' => 'app/views/errors/content_404.php'
+			];
+			$scripts = [];
+		}else {
 			$google_ads = '';
 			$google_tag = '';
 			$partials = [];

@@ -19,5 +19,4 @@ use app\config\Router;
 
 $init = new Router;
 
-$init->exec();
-  
+$init->run();
