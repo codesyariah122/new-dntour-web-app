@@ -11,13 +11,11 @@ const ads_mys = document.querySelector('#mys-content')
 const ads_mys_class = document.querySelector('.mys-wrapper')
 
 // Typing text assign
-const textElement = document.getElementById("typing");
-const text = "Sewa Mobil Bandung - Sewa Hiace Bandung";
-const typingDelay = 200;
-const erasingDelay = 50;
-const newTextDelay = 2000;
+const texts = ["Sewa Mobil Bandung", "Sewa Hiace Bandung"];
 let index = 0;
-let isDeleting = false;
+let textIndex = 0;
+let currentText = "";
+let letter = "";
 
 // Check ads class
 if (ads_center) {
@@ -147,30 +145,42 @@ getBlogContent()
 .catch(err => console.error(err))
 
 
-function typeWriter() {
-  const currentText = text.substring(0, index);
+function type() {
+	if (textIndex === texts[index].length) {
+		setTimeout(() => {
+			erase();
+		}, 2000);
+		return;
+	}
 
-  if (isDeleting) {
-    textElement.textContent = currentText;
-    index--;
+	currentText = texts[index].substring(0, textIndex + 1);
+	letter = currentText.slice(-1);
 
-    if (index === 0) {
-      isDeleting = false;
-      setTimeout(typeWriter, newTextDelay); // Jeda setelah penghapusan selesai
-    } else {
-      setTimeout(typeWriter, erasingDelay);
-    }
-  } else {
-    textElement.textContent = currentText;
-    index++;
+	document.getElementById("typing").textContent = currentText;
+	textIndex++;
 
-    if (index === text.length) {
-      isDeleting = true;
-      setTimeout(typeWriter, newTextDelay); // Jeda setelah pengetikan selesai
-    } else {
-      setTimeout(typeWriter, typingDelay);
-    }
-  }
+	setTimeout(type, 200);
 }
+
+function erase() {
+	if (textIndex === 0) {
+		index++;
+		if (index === texts.length) {
+			index = 0;
+		}
+		setTimeout(type, 1000);
+		return;
+	}
+
+	currentText = texts[index].substring(0, textIndex - 1);
+	letter = currentText.slice(-1);
+
+	document.getElementById("typing").textContent = currentText;
+	textIndex--;
+
+	setTimeout(erase, 100);
+}
+
+type();
 
 typeWriter();

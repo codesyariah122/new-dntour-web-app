@@ -22,7 +22,7 @@
 
       <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="about" role="tabpanel" aria-labelledby="about-tab">
         <div class="w-full text-gray-900 bg-white rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white mb-8">
-          <div class="cursor-pointer relative inline-flex items-center w-full px-4 py-2 text-sm font-medium border-b border-gray-200 rounded-t-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white mb-12 dark:text-white">
+          <div class="cursor-pointer relative inline-flex items-center w-full px-4 py-2 text-sm font-medium border-b border-gray-200 rounded-t-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white mb-12">
             <div class="grid grid-cols-1">
               <div class="col-span-12">
                 <h4 class="text-md font-normal"><i class="fa-solid fa-map-location-dot"></i>&nbsp;Address :</h4>
@@ -48,7 +48,7 @@
             </div>
           </div>
 
-          <div class="cursor-pointer relative inline-flex items-center w-full px-4 py-2 text-sm font-medium border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white mb-8 dark:text-white">
+          <div class="cursor-pointer relative inline-flex items-center w-full px-4 py-2 text-sm font-medium border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white mb-8">
             <div class="grid grid-cols-1">
               <div class="col-span-12">
                 <h4 class="text-md font-normal"><i class="fa-solid fa-mobile-screen-button"></i>&nbsp;Pesan melalui whatsapp :</h4>
@@ -61,7 +61,7 @@
             </div>
           </div>
 
-          <div class="cursor-pointer relative inline-flex items-center w-full px-4 py-2 text-sm font-medium rounded-b-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white dark:text-white">
+          <div class="cursor-pointer relative inline-flex items-center w-full px-4 py-2 text-sm font-medium rounded-b-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white">
             <div class="grid grid-cols-1">
               <div class="col-span-12">
                 <h4 class="text-md font-normal"><i class="fa-solid fa-envelope-open-text"></i>&nbsp;Pesan melalui email :</h4>
@@ -78,22 +78,22 @@
 
       <div class="hidden p-4 bg-black rounded-lg md:p-8 dark:bg-gray-800" id="services" role="tabpanel" aria-labelledby="services-tab">
         <h2 class="mb-3 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white"><?=$data['title']?></h2>
-        <p class="mb-3 text-gray-500 dark:text-gray-400 dark:text-white"><?=$data['our_about']?></p>
+        <p class="mb-3 text-gray-500 dark:text-gray-400"><?=$data['our_about']?></p>
       </div>
 
       <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="statistics" role="tabpanel" aria-labelledby="statistics-tab">
         <dl class="grid max-w-screen-xl grid-cols-2 gap-8 p-4 mx-auto text-gray-900 sm:grid-cols-3 xl:grid-cols-6 dark:text-white sm:p-8">
           <div class="flex flex-col">
             <dt class="mb-2 text-3xl font-extrabold">73M+</dt>
-            <dd class="text-gray-500 dark:text-gray-400  dark:text-white">Kepuasan Pelanggan</dd>
+            <dd class="text-gray-500 dark:text-gray-400">Kepuasan Pelanggan</dd>
           </div>
           <div class="flex flex-col">
             <dt class="mb-2 text-3xl font-extrabold">100M+</dt>
-            <dd class="text-gray-500 dark:text-gray-400 dark:text-white">Kenyamanan</dd>
+            <dd class="text-gray-500 dark:text-gray-400">Kenyamanan</dd>
           </div>
           <div class="flex flex-col">
             <dt class="mb-2 text-3xl font-extrabold">1000s</dt>
-            <dd class="text-gray-500 dark:text-gray-400 dark:text-white">Keramahan</dd>
+            <dd class="text-gray-500 dark:text-gray-400">Keramahan</dd>
           </div>
         </dl>
       </div>
