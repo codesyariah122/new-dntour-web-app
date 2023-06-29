@@ -14,7 +14,7 @@
                 <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 dark:text-white">
                     <img class="rounded-t-lg h-45" src="<?=$travel['img']?>" alt="<?=$travel['title']?>" />
                     <div class="px-5 pb-5 py-6">
-                        <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"><?=$travel['title']?></h5>
+                        <h4 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"><?=$travel['title']?></h4>
 
                         <div class="col-span-full mt-2 mb-4">
                             <div class="flex justify-start">

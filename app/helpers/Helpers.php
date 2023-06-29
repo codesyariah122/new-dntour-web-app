@@ -66,4 +66,5 @@ class Helpers {
 
 		return str_replace(' ', '+', urlencode($text));
 	}
+
 }

@@ -6,14 +6,14 @@
         </a>
         
         <!-- title -->
-        <h2 class="mb-0 text-6xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl py-6"><?=$data['title']?></h2>
+        <h1 class="mb-0 text-6xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl py-6"><?=$data['title']?></h1>
         <!-- tagline -->
         <h2 id="typing" class="mb-6 text-2xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl py-0"></h2>
         
         <!--  -->
-        <h1 class="text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48 leading-loose">
+        <h2 class="text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48 leading-loose">
             <?=$data['desc_title']?>
-        </h1>
+        </h2>
         <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48 leading-loose">
             <?=$data['desc']?>
         </p>

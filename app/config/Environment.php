@@ -16,5 +16,6 @@ class Environment {
 		define('GTM_KEY', $dotenv['GTM_KEY']);
 		define('CONTENTFUL_TOKEN', $dotenv['CONTENTFUL_TOKEN']);
 		define('CONTENTFUL_SPACE', $dotenv['CONTENTFUL_SPACE']);
+		define('DEV', $dotenv['DEV']);
 	}
 }

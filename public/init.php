@@ -15,6 +15,7 @@ spl_autoload_register(function($class) {
     require_once $file;
 });
 
+
 use app\config\Router;
 
 $init = new Router;

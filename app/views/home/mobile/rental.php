@@ -16,7 +16,7 @@
                     <div class="px-2 pb-5 py-6">
                         <div class="grid grid-cols-1">
                             <div class="col-span-full">     
-                                <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"><?=$rental['title']?></h5>
+                                <h4 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"><?=$rental['title']?></h4>
                             </div>
                             <div class="col-span-full mt-2 mb-4">
                                 <div class="flex justify-start">

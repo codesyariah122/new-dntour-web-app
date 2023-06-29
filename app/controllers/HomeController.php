@@ -11,11 +11,11 @@ use app\helpers\{Helpers};
 
 class HomeController {
 
-	public $helpers;
+	public $helpers, $env;
 
 	public function __construct()
 	{
-		$this->helpers = new Helpers;
+		$this->helpers = new Helpers;		
 	}
 
 	public function views($views, $param)
@@ -49,7 +49,10 @@ class HomeController {
 			'title' => 'DN tourtravel - Sewa Mobil Bandung | Sewa Hiace Bandung',
 			'page' => 'home'
 		];
-
+		if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'on') {
+			header("Location: https://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
+			exit();
+		}
 		$this->views($prepare_views, $data);
 	}
 
