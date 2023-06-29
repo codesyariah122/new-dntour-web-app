@@ -8,10 +8,4 @@ ini_set('display_errors', '1');
  * @param init file
 **/
 
-
-$uri = urldecode(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH) ?? '');
-
-if ($uri !== '/' && file_exists(__DIR__.'/public/init.php')) {
-    return false;
-}
 require_once(dirname(__FILE__)) .'/public/init.php';
