@@ -6,15 +6,13 @@
 **/
 
 namespace app\config;
-use app\controllers\{HomeController, BlogController, NotFoundController};
+use app\controllers\{NotFoundController};
 
 class Router {
-    private $routes = [], $home, $blog, $nofound;
+    private $routes = [], $nofound;
 
     public function __construct()
     {
-        $this->home = new HomeController;
-        $this->blog = new BlogController;
         $this->nofound = new NotFoundController;
     }
 
@@ -32,7 +30,6 @@ class Router {
         $uri = strtok($uri, '?');
 
         // Mencocokkan URI dengan daftar rute
-        // var_dump($uri); die;
         foreach ($this->routes as $route => $handler) {
             // Mencocokkan pola rute dengan URI
             if (preg_match('#^' . $route . '$#', $uri, $matches)) {
