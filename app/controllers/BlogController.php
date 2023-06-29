@@ -24,7 +24,7 @@ class BlogController {
 
 	public function index() 
 	{
-		echo "Blog Page";
+		echo "Blog Page On progress development";
 	}
 
 	public function detail($slug)

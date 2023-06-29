@@ -6,12 +6,23 @@
 **/
 
 namespace app\config;
+use app\controllers\{HomeController, BlogController, NotFoundController};
 
 class Router {
-    private $routes = [];
+    private $routes = [], $home, $blog, $nofound;
+
+    public function __construct()
+    {
+        $this->home = new HomeController;
+        $this->blog = new BlogController;
+        $this->nofound = new NotFoundController;
+    }
 
     public function get($route, $handler) {
-        $this->routes[$route] = $handler;
+       $route = str_replace('{slug}', '([^/]+)', $route);
+
+    // Menambahkan rute dan handler ke daftar rute
+       $this->routes[$route] = $handler;
     }
 
     public function run() {
@@ -21,6 +32,7 @@ class Router {
         $uri = strtok($uri, '?');
 
         // Mencocokkan URI dengan daftar rute
+        // var_dump($uri); die;
         foreach ($this->routes as $route => $handler) {
             // Mencocokkan pola rute dengan URI
             if (preg_match('#^' . $route . '$#', $uri, $matches)) {
@@ -48,6 +60,6 @@ class Router {
 
         header("HTTP/1.0 404 Not Found");
 
-        echo 'Halaman tidak ditemukan';
+        $this->nofound->run();
     }
 }
