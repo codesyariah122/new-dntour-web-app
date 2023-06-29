@@ -1,23 +1,27 @@
 <?php
 /**
  * @author Puji Ermanto <pujiermanto@gmail.com>
- * @return __constructor
+ * @return Router
+ * @param className
 **/
 
-spl_autoload_register(function($class) {
-    $class = str_replace('\\', '/', $class);
-    $file = $class . '.php';
+spl_autoload_register(function($className) {
+    $classPath = str_replace('\\', DIRECTORY_SEPARATOR, $className);
+    $classFile = $classPath . '.php';
 
-    if ( !file_exists($file) ) {
-        echo "<h1>File not exists {$file} </h1>";
+     if (file_exists($classFile)) {
+        require_once $classFile;
     }
-
-    require_once $file;
 });
 
-
+// Inisialisasi Router
 use app\config\Router;
+$router = new Router;
 
-$init = new Router;
+// Menambahkan rute ke router
+$router->get('/', 'HomeController@index');
+$router->get('/blog', 'BlogController@index');
+$router->get('/blog/{slug}', 'BlogController@detail');
 
-$init->run();
+// Jalankan router
+$router->run();
