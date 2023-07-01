@@ -9,11 +9,11 @@ namespace app\config;
 use app\controllers\{NotFoundController};
 
 class Router {
-    private $routes = [], $nofound;
+    private $routes = [], $notfound;
 
     public function __construct()
     {
-        $this->nofound = new NotFoundController;
+        $this->notfound = new NotFoundController;
     }
 
     public function get($route, $handler) {
@@ -57,6 +57,6 @@ class Router {
 
         header("HTTP/1.0 404 Not Found");
 
-        $this->nofound->run();
+        $this->notfound->run();
     }
 }
