@@ -3,38 +3,46 @@
 namespace app\controllers;
 
 use app\models\WebApp;
+use app\helpers\{Helpers};
 
 class NotFoundController {
 
-
-    public function views($views, $param)
+    public $helpers, $env;
+    
+    private static function views($layout, $param)
     {
         $model = new WebApp();
         $data = $model->getData();
         $meta = $model->getMetaTag($param['title']);
+        $contents = $model::getPartials($param['page']);
         $partials = $model->getPartials($param['page']);
 
-        foreach($views as $view):
-            require_once $view;
-        endforeach;
+        extract([$contents, $partials]);
+
+        ob_start();
+        require_once $param['view'];
+        $content = ob_get_clean();
+        ob_start();
+        require_once $layout;
+        $output = ob_get_clean();
+
+        echo $output;
     }
 
     public function run() {
         // Halaman not found
         header("HTTP/1.0 404 Not Found");
 
-        $prepare_views = [
-            'header' => 'app/views/layout/header.php',
-            'home' => 'app/views/404.php',
-            'footer' => 'app/views/layout/footer.php',
-        ];
+        $layout = 'app/views/layout/AppLayout.php';
+        $view = 'app/views/404.php';
 
         $data = [
-            'title' => "404 Not Found",
-            'page' => '404'
+           'title' => "404 Not Found",
+           'page' => '404',
+            'view' => $view
         ];
 
-        $this->views($prepare_views, $data);
+        self::views($layout, $data);
     }
 }
-?>
+

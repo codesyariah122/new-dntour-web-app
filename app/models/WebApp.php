@@ -22,9 +22,9 @@ class WebApp {
 
 	public static function getPartials($page)
 	{
+		$helpers = new Helpers;
+		$check_mobile = $helpers->isMobileDevice();
 		if($page === 'home') {
-			$helpers = new Helpers;
-			$check_mobile = $helpers->isMobileDevice();
 			$google_ads = '';
 			$google_tag = 'app/views/layout/partials/google_meta.php';
 			$contents = [
