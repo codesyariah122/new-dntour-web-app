@@ -64,7 +64,7 @@ class PackagesData {
                 'category_id' => 1,
                 'title' => 'Alphard',
                 'price' => number_format(2000000, 0, ',', '.'),
-                'img' => '/public/assets/images/cars/alphard.png'
+                'img' => '/public/assets/images/cars/alphard-black.png'
             ],
             [
                 'id' => 6,

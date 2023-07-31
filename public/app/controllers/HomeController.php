@@ -13,48 +13,47 @@ class HomeController {
 
 	public $helpers, $env;
 
-	private static function views($layout, $param)
+	public function __construct()
+	{
+		$this->helpers = new Helpers;		
+	}
+
+	public function views($views, $param)
 	{
 		$model = new WebApp;
-		$helpers = new Helpers;
-		$check_mobile = $helpers->isMobileDevice();
-		$data = $model::getData();
-		$meta = $model::getMetaTag($param['title']);
-		$contents = $model::getPartials($param['page']);
-		$partials = $model::getPartials($param['page']);
+		$data = $model->getData();
+		$meta = $model->getMetaTag($param['title']);
+		$partials = $model->getPartials($param['page']);
+
 		$rentals = $data['rentals']['data'];
 		$travels = $data['travels']['data'];
 		$tours = $data['tours']['data'];
 		$categories = $data['categories']['data'];
 		$sliders = $data['sliders']['data'];
+		$helpers = $this->helpers;
 
-		extract([$contents, $partials]);
-
-		ob_start();
-		require_once $param['view'];
-		$content = ob_get_clean();
-		ob_start();
-		require_once $layout;
-		$output = ob_get_clean();
-
-		echo $output;
+		foreach($views as $view):
+			require_once $view;
+		endforeach;
 	}
 
 	public function index() 
 	{
-		$layout = 'app/views/layout/AppLayout.php';
-		$view = 'app/views/home.php';
+		$prepare_views = [
+			'header' => 'app/views/layout/header.php',
+			'home' => 'app/views/home.php',
+			'footer' => 'app/views/layout/footer.php',
+		];
 
 		$data = [
 			'title' => 'D & N tourtravel - Sewa Mobil Bandung | Sewa Hiace Bandung',
-			'page' => 'home',
-			'view' => $view
+			'page' => 'home'
 		];
 		if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'on') {
 			header("Location: https://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
 			exit();
 		}
-		self::views($layout, $data);
+		$this->views($prepare_views, $data);
 	}
 
 }
