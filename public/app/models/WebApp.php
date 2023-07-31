@@ -17,37 +17,38 @@ class WebApp {
 	public function __construct()
 	{
 		$this->env = new Environment;
+		$this->helpers = new Helpers;
+		$this->datasources = new PackagesData;
+		$this->check_mobile = $this->helpers->isMobileDevice();
 		$this->env->config();
 	}
 
-	public static function getPartials($page)
+	public function getPartials($page)
 	{
 		if($page === 'home') {
-			$helpers = new Helpers;
-			$check_mobile = $helpers->isMobileDevice();
 			$google_ads = '';
 			$google_tag = 'app/views/layout/partials/google_meta.php';
-			$contents = [
+			$partials = [
 				'loading' => 'app/views/home/loading.php',
-				'hero' => !$check_mobile ? 'app/views/home/hero.php' : 'app/views/home/mobile/hero.php',
-				'panel' => !$check_mobile ? 'app/views/home/panel.php' : 'app/views/home/mobile/panel.php',
-				'rental' => !$check_mobile ? 'app/views/home/rental.php' : 'app/views/home/mobile/rental.php',
-				'travel' => !$check_mobile ? 'app/views/home/travel.php' : 'app/views/home/mobile/travel.php',
-				'tour' => !$check_mobile ? 'app/views/home/tour.php' : 'app/views/home/mobile/tour.php',
+				'hero' => !$this->check_mobile ? 'app/views/home/hero.php' : 'app/views/home/mobile/hero.php',
+				'panel' => !$this->check_mobile ? 'app/views/home/panel.php' : 'app/views/home/mobile/panel.php',
+				'rental' => !$this->check_mobile ? 'app/views/home/rental.php' : 'app/views/home/mobile/rental.php',
+				'travel' => !$this->check_mobile ? 'app/views/home/travel.php' : 'app/views/home/mobile/travel.php',
+				'tour' => !$this->check_mobile ? 'app/views/home/tour.php' : 'app/views/home/mobile/tour.php',
 				'blog' => 'app/views/home/blog.php',
-				'contact' => !$check_mobile ? 'app/views/home/contact.php' : 'app/views/home/mobile/contact.php',
-				'whatsapp' => !$check_mobile ? 'app/views/home/whatsapp.php' : 'app/views/home/mobile/whatsapp.php',
+				'contact' => !$this->check_mobile ? 'app/views/home/contact.php' : 'app/views/home/mobile/contact.php',
+				'whatsapp' => !$this->check_mobile ? 'app/views/home/whatsapp.php' : 'app/views/home/mobile/whatsapp.php',
 			];
 			$scripts = ['/public/assets/js/contentful-init.js', '/public/assets/js/script.js', '/public/assets/js/nav.js'];
 			
 		} elseif($page === 'blog') {
 			$google_ads = 'app/views/layout/partials/google_ads.php';
 			$google_tag = 'app/views/layout/partials/google_meta.php';
-			$contents = [
+			$partials = [
 				'loading' => 'app/views/home/loading.php',
-				'hero' => !$check_mobile ? 'app/views/blog/hero.php' : 'app/views/blog/mobile/hero.php',
-				'content' => !$check_mobile ? 'app/views/blog/content.php' : 'app/views/blog/mobile/content.php',
-				'whatsapp' => !$check_mobile ? 'app/views/home/whatsapp.php' : 'app/views/home/mobile/whatsapp.php',
+				'hero' => !$this->check_mobile ? 'app/views/blog/hero.php' : 'app/views/blog/mobile/hero.php',
+				'content' => !$this->check_mobile ? 'app/views/blog/content.php' : 'app/views/blog/mobile/content.php',
+				'whatsapp' => !$this->check_mobile ? 'app/views/home/whatsapp.php' : 'app/views/home/mobile/whatsapp.php',
 			];
 
 			$scripts = ['/public/assets/js/marked.umd.min.js', '/public/assets/js/contentful-init.js', '/public/assets/js/blog/script.js'];
@@ -55,14 +56,14 @@ class WebApp {
 		} elseif($page === '404') {
 			$google_ads = '';
 			$google_tag = '';
-			$contents = [
+			$partials = [
 				'error_404_content' => 'app/views/errors/content_404.php'
 			];
 			$scripts = [];
 		}else {
 			$google_ads = '';
 			$google_tag = '';
-			$contents = [];
+			$partials = [];
 			$scripts = [];
 		}
 
@@ -72,12 +73,12 @@ class WebApp {
 			'google_ads' => $google_ads,
 			'navbar' => $page === 'home' ? 'app/views/layout/partials/navbar.php' : 'app/views/blog/partials/navbar.php',
 			'footer_content' => 'app/views/layouts/partials/footer_content.php',
-			'views' => $contents,
+			'views' => $partials,
 			'scripts' => $scripts
 		];
 	}
 
-	public static function getMetaTag($title) 
+	public function getMetaTag($title) 
 	{	
 		return [
 			'canonical' => 'https://dntourtravel.com',
@@ -106,9 +107,8 @@ class WebApp {
 		];
 	}
 
-	public static function getData() 
+	public function getData() 
 	{
-		$datasources = new PackagesData;
 		$hero_bg = '/public/assets/images/bg-hero.jpg';
 		
 		return [
@@ -136,15 +136,15 @@ class WebApp {
 			D & N Tour Travel menawarkan beberapa layanan jasa yang dapat Anda pilih sesuai dengan kebutuhan Anda. Layanan jasa kami yang menjadi prioritas ialah antar jemput Bandung – Jakarta (Bandara Soetta). Semua layanan yang kami tawarkan dibanderol dengan harga yang ekonomis dan terjangkau serta lengkap dengan driver / sopir profesional yang sudah memiliki perizinan mengemudi secara legal dari pihak yang berwenang.',
 			'phone' => '6283165539138',
             // For data products
-			'rentals' => ['data' => $datasources->rentals()],
+			'rentals' => ['data' => $this->datasources->rentals()],
 
-			'travels' => ['data' => $datasources->travels()],
+			'travels' => ['data' => $this->datasources->travels()],
 
-			'tours' => ['data' => $datasources->tours()],
+			'tours' => ['data' => $this->datasources->tours()],
 
-			'categories' => ['data' => $datasources->categories()],
+			'categories' => ['data' => $this->datasources->categories()],
 
-			'sliders' => ['data' => $datasources->sliders()],
+			'sliders' => ['data' => $this->datasources->sliders()],
 			'contentful_token' => CONTENTFUL_TOKEN,
 			'contentful_space' => CONTENTFUL_SPACE,
 			'vendor' => [

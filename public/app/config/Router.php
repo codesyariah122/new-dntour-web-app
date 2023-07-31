@@ -16,18 +16,10 @@ class Router {
         $this->notfound = new NotFoundController;
     }
 
-    private function addRoute($method, $route, $handler): void {
-        $paramPattern = ($method === 'GET') ? '{param}' : '{dataParam}';
-        $route = str_replace($paramPattern, '([^/]+)', $route);
-        $this->routes[$route] = $handler;
-    }
-
-    public function group($prefix, $callback): void {
-        $callback($this);
-    }
-
     public function get($route, $handler) {
-       $this->addRoute('GET', $route, $handler);
+       $route = str_replace('{slug}', '([^/]+)', $route);
+
+       $this->routes[$route] = $handler;
     }
 
     public function run() {
