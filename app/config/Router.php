@@ -17,7 +17,7 @@ class Router {
     }
 
     private function addRoute($method, $route, $handler): void {
-        $paramPattern = ($method === 'GET') ? '{param}' : '{dataParam}';
+        $paramPattern = ($method === 'GET') ? '{slug}' : '{dataParam}';
         $route = str_replace($paramPattern, '([^/]+)', $route);
         $this->routes[$route] = $handler;
     }
