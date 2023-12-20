@@ -74,5 +74,6 @@
     <?php for($i=0; $i < count($partials['scripts']); $i++): ?>
       <script type="text/javascript" src="<?=$partials['scripts'][$i]?>"></script>
     <?php endfor;?>
+    <script src="https://dashboard.chatfuel.com/integration/landing-wa-widget.js" async defer data-prefilled="Hello, DN Tour saya ingin memesan paket perjalanan dari DN Tour, bisa infokan saya harga terbaik dari DN Tour." data-welcome="Halo travelers, ada yang bisa kami bantu ?" data-phone="6283165539138"></script>
   </body>
 </html>

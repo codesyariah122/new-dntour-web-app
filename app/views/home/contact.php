@@ -67,8 +67,8 @@
                 <h4 class="text-md font-normal"><i class="fa-solid fa-envelope-open-text"></i>&nbsp;Pesan melalui email :</h4>
               </div>
               <div class="col-span-6 mt-4">
-                <a href="mailto:dntourtr@dntourtravel.com" class="font-bold text-lg">
-                  dntourtr@dntourtravel.com
+                <a href="mailto:dntourtr@dntourtravel.dksindo.com" class="font-bold text-lg">
+                  dntourtr@dntourtravel.dksindo.com
                 </a>
               </div>
             </div>
