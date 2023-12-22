@@ -135,6 +135,17 @@
         background-size: auto 75px;
     }
 
+    .bike-4 {
+        background: url(https://www.toyotasutan.com/product/alphard/img/360-view/data1/images/alfonso_360ext_06.png) 0 100% no-repeat;
+        z-index: 1;
+        position: absolute;
+        bottom: 100px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: auto 75px;
+    }
+
     .bike-1 {
         animation: parallax_bike linear 10s infinite both;
     }
@@ -145,6 +156,10 @@
 
     .bike-3 {
         animation: parallax_bike linear 20s infinite both;
+    }
+
+    .bike-4 {
+        animation: parallax_bike linear 25s infinite both;
     }
 
     @keyframes parallax_fg {
@@ -237,6 +252,7 @@
         <div class="parallax-layer bike-1"></div>
         <div class="parallax-layer bike-2"></div>
         <div class="parallax-layer bike-3"></div>
+        <div class="parallax-layer bike-4"></div>
         <div class="parallax-layer layer-3"></div>
         <div class="parallax-layer layer-2"></div>
         <div class="parallax-layer layer-1"></div>
@@ -253,7 +269,7 @@
             <div class="col-span-full">
                 <a href="#rental" id="cta-hero" class="hero-cta py-1 px-1 pr-4 mb-7 text-sm text-blue-700 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-blue-800 fadeInLeft">
                     <div class="flex justify-between items-center">
-                        <div class="absolute left-0 top-0 transform -translate-y-1/2 bg-blue-600 rounded-full text-white px-6 py-1.5 mr-3">
+                        <div class="absolute left-0 top-0 transform -translate-y-1/2 bg-blue-600 rounded-full text-white px-6 py-1.5 mr-24">
                             <i class="fa-solid fa-van-shuttle fa-1xl"></i>
                         </div>
                         <div>
