@@ -12,7 +12,7 @@ const ads_mys_class = document.querySelector(".mys-wrapper");
 
 // Typing text assign
 // const texts = ["Sewa Mobil Bandung", "Sewa Hiace Bandung"];
-const texts = ["Tour Travel", "&", "Rent Car"];
+const texts = ["Tour Travel", "Rent Car"];
 const textsCta = [
   "Sewa Mobil Bandung",
   "Sewa Hiace Bandung",
