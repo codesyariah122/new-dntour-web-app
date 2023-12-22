@@ -13,3 +13,76 @@ onClick="orderNow({
                                 price: `<?=$travel['price']?>`, 
                                 category: `<?=$category?>`
                             })"
+
+
+
+                            <section id="home" class="bg-center bg-no-repeat bg-cover bg-[url('<?= $data['hero_img'] ?>')] bg-gray-700 bg-blend-multiply">
+    <div class="px-4 mx-auto max-w-screen-xl text-center py-24">
+        <a href="#rental" id="hero-cta" class="hero-cta inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-blue-700 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-blue-800">
+            <span class="text-xs bg-blue-600 rounded-full text-white px-4 py-1.5 mr-3">New</span> <span class="text-sm font-medium">Sewa Mobil </span>&nbsp;<i class="fa-solid fa-angle-down text-lg"></i>
+        </a>
+
+        <!-- title -->
+        <h1 class="mb-0 text-6xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl py-6"><?= $data['title'] ?></h1>
+        <!-- tagline -->
+        <h2 id="typing" class="mb-6 text-2xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl py-0"></h2>
+
+        <!--  -->
+        <h2 class="text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48 leading-loose">
+            <?= $data['desc_title'] ?>
+        </h2>
+        <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48 leading-loose">
+            <?= $data['desc'] ?>
+        </p>
+    </div>
+    <div class="top-auto boder-0 border-b-0 bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden h-70-px" style="transform: translateZ(0)">
+        <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+            <polygon class="text-blueGray-200 fill-current" points="2560 0 2560 100 0 100"></polygon>
+        </svg>
+    </div>
+</section>
+
+<script type="text/javascript">
+    $('#hero-cta').click(function(e) {
+        e.preventDefault();
+        let target = $(this).attr('href');
+        let offset = $(target).offset().top;
+        $('html, body').animate({
+            scrollTop: offset
+        }, 800);
+    });
+</script>
+
+
+<section id="home" class="relative">
+    <img src="https://github.com/codesyariah122/d-n-tour/blob/main/assets/images/home/parallax-mobile.jpg?raw=true" class="absolute inset-0 object-cover w-full h-full" alt="" />
+    <div class="relative bg-opacity-10 bg-blue-700">
+        <svg class="border-b-0 absolute inset-x-0 bottom-0 text-white" viewBox="0 0 1160 163">
+            <path fill="currentColor" d="M-164 13L-104 39.7C-44 66 76 120 196 141C316 162 436 152 556 119.7C676 88 796 34 916 13C1036 -8 1156 2 1216 7.7L1276 13V162.5H1216C1156 162.5 1036 162.5 916 162.5C796 162.5 676 162.5 556 162.5C436 162.5 316 162.5 196 162.5C76 162.5 -44 162.5 -104 162.5H-164V13Z"></path>
+        </svg>
+        <div class="relative px-4 py-16 mx-auto overflow-hidden sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 h-screen">
+            <div class="flex flex-col items-center justify-between xl:flex-row">
+                <div class="w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12">
+                    <!-- <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">
+                        The quick, brown fox <br class="hidden md:block" />
+                        jumps over a lazy dog
+                    </h2>
+                    <p class="max-w-xl mb-4 text-base text-gray-200 md:text-lg">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudan, totam rem aperiam, eaque ipsa quae.
+                    </p>
+                    <a href="/" aria-label="" class="inline-flex items-center font-semibold tracking-wider transition-colors duration-200 text-teal-accent-400 hover:text-teal-accent-700">
+                        Learn more
+                        <svg class="inline-block w-3 ml-2" fill="currentColor" viewBox="0 0 12 12">
+                            <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z"></path>
+                        </svg>
+                    </a> -->
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+&nbsp;&nbsp;<i class="fa-solid fa-angle-down text-lg"></i>

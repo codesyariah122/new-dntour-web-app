@@ -1,12 +1,34 @@
 <?php
+
 /**
  * @author Puji Ermanto <pujiermanto@gmail.com>
  * @return USER_AGENT
-**/
+ **/
 
 namespace app\datasources;
 
-class PackagesData {
+class PackagesData
+{
+
+
+    public function file_images()
+    {
+        return [
+            [
+                'id' => 1,
+                'img' => '/public/assets/images/file1.png'
+            ],
+
+            [
+                'id' => 3,
+                'img' => '/public/assets/images/file3.png'
+            ],
+            [
+                'id' => 4,
+                'img' => '/public/assets/images/file4.png'
+            ]
+        ];
+    }
 
     public function categories()
     {
@@ -35,7 +57,7 @@ class PackagesData {
                 'id' => 1,
                 'category_id' => 1,
                 'title' => 'Avanza',
-                'price' => number_format(490000,0, ',', '.'),
+                'price' => number_format(490000, 0, ',', '.'),
                 'img' => '/public/assets/images/cars/avanza.png'
             ],
             [
@@ -83,7 +105,7 @@ class PackagesData {
                 'id' => 1,
                 'category_id' => 2,
                 'title' => 'Avanza',
-                'price' => number_format(790000,0, ',', '.'),
+                'price' => number_format(790000, 0, ',', '.'),
                 'img' => '/public/assets/images/cars/avanza.png'
             ],
             [
@@ -117,7 +139,7 @@ class PackagesData {
                 'id' => 1,
                 'category_id' => 3,
                 'title' => 'Paket Lembang',
-                'price' => number_format(550000,0, ',', '.'),
+                'price' => number_format(550000, 0, ',', '.'),
                 'img' => '/public/assets/images/city-tour/city-tour1.jpg'
             ],
             [

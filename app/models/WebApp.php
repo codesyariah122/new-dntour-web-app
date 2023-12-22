@@ -1,8 +1,9 @@
 <?php
+
 /**
  * @author Puji Ermanto <pujiermanto@gmail.com>
  * @return __constructor
-**/
+ **/
 
 namespace app\models;
 
@@ -10,7 +11,8 @@ use app\helpers\{Helpers};
 use app\datasources\{PackagesData};
 use app\config\Environment;
 
-class WebApp {
+class WebApp
+{
 
 	private $helpers, $datasources, $filterCategory, $check_mobile, $env;
 
@@ -24,7 +26,7 @@ class WebApp {
 	{
 		$helpers = new Helpers;
 		$check_mobile = $helpers->isMobileDevice();
-		if($page === 'home') {
+		if ($page === 'home') {
 			$google_ads = '';
 			$google_tag = 'app/views/layout/partials/google_meta.php';
 			$contents = [
@@ -34,13 +36,12 @@ class WebApp {
 				'rental' => !$check_mobile ? 'app/views/home/rental.php' : 'app/views/home/mobile/rental.php',
 				'travel' => !$check_mobile ? 'app/views/home/travel.php' : 'app/views/home/mobile/travel.php',
 				'tour' => !$check_mobile ? 'app/views/home/tour.php' : 'app/views/home/mobile/tour.php',
-				'blog' => 'app/views/home/blog.php',
+				//'blog' => 'app/views/home/blog.php',
 				'contact' => !$check_mobile ? 'app/views/home/contact.php' : 'app/views/home/mobile/contact.php',
-				'whatsapp' => !$check_mobile ? 'app/views/home/whatsapp.php' : 'app/views/home/mobile/whatsapp.php',
+				//'whatsapp' => !$check_mobile ? 'app/views/home/whatsapp.php' : 'app/views/home/mobile/whatsapp.php',
 			];
 			$scripts = ['/public/assets/js/contentful-init.js', '/public/assets/js/script.js', '/public/assets/js/nav.js'];
-			
-		} elseif($page === 'blog') {
+		} elseif ($page === 'blog') {
 			$google_ads = 'app/views/layout/partials/google_ads.php';
 			$google_tag = 'app/views/layout/partials/google_meta.php';
 			$contents = [
@@ -51,15 +52,14 @@ class WebApp {
 			];
 
 			$scripts = ['/public/assets/js/marked.umd.min.js', '/public/assets/js/contentful-init.js', '/public/assets/js/blog/script.js'];
-
-		} elseif($page === '404') {
+		} elseif ($page === '404') {
 			$google_ads = '';
 			$google_tag = '';
 			$contents = [
 				'error_404_content' => 'app/views/errors/content_404.php'
 			];
 			$scripts = [];
-		}else {
+		} else {
 			$google_ads = '';
 			$google_tag = '';
 			$contents = [];
@@ -77,8 +77,8 @@ class WebApp {
 		];
 	}
 
-	public static function getMetaTag($title) 
-	{	
+	public static function getMetaTag($title)
+	{
 		return [
 			'canonical' => 'https://dntourtravel.com',
 			'meta_desc' => 'D & N Tour Travel | Sewa Mobil Bandung | Sewa Hiace Bandung | Rental Mobil Bandung | Rental Mobil Bandara',
@@ -106,13 +106,13 @@ class WebApp {
 		];
 	}
 
-	public static function getData() 
+	public static function getData()
 	{
 		$datasources = new PackagesData;
 		$hero_bg = '/public/assets/images/bg-hero.jpg';
-		
+
 		return [
-			'logo' => '/public/assets/img/D&N-Logo.png',
+			'logo' => '/public/assets/img/new-logo.png',
 			'hero_img' => $hero_bg,
 			'bg_img' => '/public/assets/images/bg-new.webp',
 			'favicon' => '/public/assets/favicon.ico',
@@ -135,7 +135,7 @@ class WebApp {
 			<br/><br/>
 			D & N Tour Travel menawarkan beberapa layanan jasa yang dapat Anda pilih sesuai dengan kebutuhan Anda. Layanan jasa kami yang menjadi prioritas ialah antar jemput Bandung – Jakarta (Bandara Soetta). Semua layanan yang kami tawarkan dibanderol dengan harga yang ekonomis dan terjangkau serta lengkap dengan driver / sopir profesional yang sudah memiliki perizinan mengemudi secara legal dari pihak yang berwenang.',
 			'phone' => '6283165539138',
-            // For data products
+			// For data products
 			'rentals' => ['data' => $datasources->rentals()],
 
 			'travels' => ['data' => $datasources->travels()],
@@ -143,6 +143,10 @@ class WebApp {
 			'tours' => ['data' => $datasources->tours()],
 
 			'categories' => ['data' => $datasources->categories()],
+
+			'file_images' => [
+				'data' => $datasources->file_images()
+			],
 
 			'sliders' => ['data' => $datasources->sliders()],
 			'contentful_token' => CONTENTFUL_TOKEN,

@@ -1,15 +1,17 @@
 <?php
+
 /**
  * @author Puji Ermanto <pujiermanto@gmail.com>
  * @param viws
-**/
+ **/
 
 namespace app\controllers;
 
 use app\models\WebApp;
 use app\helpers\{Helpers};
 
-class HomeController {
+class HomeController
+{
 
 	public $helpers, $env;
 
@@ -27,6 +29,7 @@ class HomeController {
 		$tours = $data['tours']['data'];
 		$categories = $data['categories']['data'];
 		$sliders = $data['sliders']['data'];
+		$file_images = $data['file_images']['data'];
 
 		extract([$contents, $partials]);
 
@@ -40,7 +43,7 @@ class HomeController {
 		echo $output;
 	}
 
-	public function index() 
+	public function index()
 	{
 		$layout = 'app/views/layout/AppLayout.php';
 		$view = 'app/views/home.php';
@@ -56,5 +59,4 @@ class HomeController {
 		}
 		self::views($layout, $data);
 	}
-
 }
