@@ -21,10 +21,11 @@
 
   <script src="<?= $data['vendor']['tailwind'] ?>"></script>
   <link href="<?= $data['vendor']['flowbite']['css'] ?>" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Poppins:wght@900&family=Quicksand:wght@500&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Aguafina+Script|Dancing+Script|Kaushan+Script|Open+Sans|Petit+Formal+Script|Pinyon+Script|Roboto|Rouge+Script" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Train+One&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="/public/assets/css/style.css" />

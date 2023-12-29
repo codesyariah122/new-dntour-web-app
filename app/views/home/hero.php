@@ -192,7 +192,7 @@
     }
 
     .logo h1 {
-        font-family: 'Bungee Spice', sans-serif;
+        font-family: 'Train One', sans-serif;
         font-size: 4rem;
     }
 
