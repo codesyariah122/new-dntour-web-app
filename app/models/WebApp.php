@@ -80,11 +80,11 @@ class WebApp
 	public static function getMetaTag($title)
 	{
 		return [
-			'canonical' => 'https://dntourtravel.com',
+			'canonical' => 'https://dntourtravel.dksindo.com',
 			'meta_desc' => 'D & N Tour Travel | Sewa Mobil Bandung | Sewa Hiace Bandung | Rental Mobil Bandung | Rental Mobil Bandara',
 			'meta_key' => $title,
 			'meta_author' => 'D & N Tour Travel',
-			'og_url' => 'https://dntourtravel.com',
+			'og_url' => 'https://dntourtravel.dksindo.com',
 			'og_type' => 'website',
 			'og_site_name' => 'D & N Tour Travel - Sewa Mobil Bandung | Sewa Hiace Bandung',
 			'og_title' => $title,

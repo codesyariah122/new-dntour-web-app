@@ -196,7 +196,8 @@
     }
 
     .logo h1 {
-        font-family: 'Bungee Spice', sans-serif;
+        /*font-family: 'Bungee Spice', sans-serif;*/
+        font-family: 'Train One', sans-serif;
         font-size: 4rem;
     }
 
@@ -259,7 +260,7 @@
         <div class="logo grid grid-cols-1 gap-4 place-items-center h-56 py-24">
             <!-- <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/24650/logo.svg" alt="" /> -->
             <div class="col">
-                <h1 class="text-bold">D & N</h1>
+                <h1 class="text-bold text-black">D & N</h1>
             </div>
             <div class="col mt-2 fadeInRight">
                 <h4 id="typing" class="text-black"></h4>

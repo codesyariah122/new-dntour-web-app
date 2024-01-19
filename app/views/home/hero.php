@@ -192,8 +192,13 @@
     }
 
     .logo h1 {
-        font-family: 'Train One', sans-serif;
+        font-family: 'Racing Sans One', sans-serif;
         font-size: 4rem;
+        background: linear-gradient(to right, #b8860b, #ffd700);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     }
 
     .logo h4 {
